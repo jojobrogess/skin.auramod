@@ -741,7 +741,7 @@
           <bottom>10</bottom>
           <height>45</height>
           <width>90</width>
-          <texture background="true" colordiffuse="99FF0000" flipy="true">diffuse/halfbox.png</texture>
+          <texture background="true" colordiffuse="99000000" flipy="true">diffuse/halfbox.png</texture>
         </control>
         <control type="textbox">
           <bottom>-10</bottom>
