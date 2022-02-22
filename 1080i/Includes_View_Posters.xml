@@ -1764,6 +1764,7 @@
     <control type="group">
       <visible>Control.IsVisible(502)</visible>
       <visible>Container.Content(episodes) | Container.Content(seasons)</visible>
+      <include>View_Library_Poster_Medium</include>
       <control type="group">
         <include condition="Skin.HasSetting(DisableNetflixView)">View_Pad</include>
         <include condition="!Skin.HasSetting(DisableNetflixView)">Object_Episodes_Info</include>
