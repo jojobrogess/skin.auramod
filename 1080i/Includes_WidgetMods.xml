@@ -745,7 +745,7 @@
         </control>
         <control type="textbox">
           <bottom>-15</bottom>
-          <left>16</left>
+          <left>10</left>
           <height>60</height>
           <width>90</width>
           <label>[I]$INFO[ListItem.Season, S,: ]$INFO[ListItem.Episode,E, ][/I]</label>
