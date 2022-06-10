@@ -117,7 +117,7 @@
                             <height>1</height>
                             <top>-1000</top>
                             <onclick>ActivateWindow(Weather)</onclick>
-                            <visible>String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)</visible>
+                            <visible>[String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)] + !String.IsEmpty(Weather.Plugin)</visible>
                             <animation effect="fade" end="0" condition="true">Conditional</animation>
                         </control>
 			<control type="group">
@@ -125,7 +125,7 @@
 			<visible>String.IsEqual(Container(300).ListItem.Property(widgethubscroll),true)</visible>
 			</control>
                         <control type="group">
-                            <visible>String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)</visible>
+                            <visible>[String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)] + !String.IsEmpty(Weather.Plugin)</visible>
                             <include>Weather</include>
                         </control>
                         <control type="group">

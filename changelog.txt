@@ -1,3 +1,7 @@
+v1.1.8
+-Fix weather widget visibility
+-Fix skin settings labels
+-Fix skin settings comment blocks
 v1.1.7
 -Fix empty enabled widgets visibility
 -Fix default widget paths
