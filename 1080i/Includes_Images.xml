@@ -354,8 +354,8 @@
         <value>$VAR[Image_GenreIcons_Path]$INFO[ListItem.Label,,.png]</value>
     </variable>
     <variable name="Image_GenreIcons_Path">
-        <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/</value>
-        <value condition="System.HasAddon(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>
+        <value condition="System.AddonIsEnabled(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/</value>
+        <value condition="System.AddonIsEnabled(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>
     </variable>
 
     <variable name="Image_FallbackIcon">
