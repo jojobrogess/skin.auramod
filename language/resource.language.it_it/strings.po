@@ -4501,3 +4501,13 @@ msgstr ""
 msgctxt "#31921"
 msgid "Spotlight TV"
 msgstr ""
+
+#: /shortcuts/searchmenus.DATA.xml
+msgctxt "#31922"
+msgid "Umbrella Movies"
+msgstr "Film Umbrella"
+
+#: /shortcuts/searchmenus.DATA.xml
+msgctxt "#31923"
+msgid "Umbrella TV Shows"
+msgstr "Serie Umbrella"
