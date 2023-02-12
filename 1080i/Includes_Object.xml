@@ -3603,7 +3603,7 @@
       <control type="group">
         <left>0</left>
         <top>0</top>
-        <width>$PARAM[width]</width>
+        <width>400</width>
         <height>$PARAM[height]</height>
         <visible>$PARAM[visible]</visible>
         <control type="group">
