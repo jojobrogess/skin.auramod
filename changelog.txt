@@ -1,3 +1,8 @@
+v1.1.10
+-Fix Custom1118-EnableRatings missing parenthesis.
+-Fix DialogPVRChannelsOSD.xml ListItemThumb 
+-Fix Includes_Global extra space in value condition
+-Fix Includes_View_Posters extra hieght value
 v1.1.9
 -Fix Aura Home horizontal menu layout
 -Fix conditional spacers when horizontal menu enabled
