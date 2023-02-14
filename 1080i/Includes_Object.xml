@@ -8693,9 +8693,9 @@
             <thumb>special://skin/extras/icons/viewmode.png</thumb>
           </item>
           <item>
-            <label>$LOCALIZE[31504]</label> <!-- My Lists -->
-            <onclick>ActivateWindow(1164)</onclick>
-            <thumb>special://skin/extras/icons/clipboard.png</thumb>
+            <label>Category Widget Size</label> <!-- Category Widget Size -->
+            <onclick>ActivateWindow(1140)</onclick>>
+            <thumb>defaultsets.png</thumb>
           </item>
         </content>
       </control>
@@ -8790,6 +8790,11 @@
             <thumb>special://skin/extras/icons/paintbrush.png</thumb>
           </item>
           <item>
+            <label>$LOCALIZE[31504]</label> <!-- My Lists -->
+            <onclick>ActivateWindow(1164)</onclick>
+            <thumb>special://skin/extras/icons/clipboard.png</thumb>
+          </item>
+          <item>
             <label>$LOCALIZE[31738]</label> <!-- Search Lists -->
             <onclick>ActivateWindow(1163)</onclick>
             <thumb>special://skin/extras/icons/search.png</thumb>
@@ -8813,11 +8818,6 @@
             <label>$LOCALIZE[31741]</label> <!-- Info -->
             <onclick>ActivateWindow(systeminfo)</onclick>
             <icon>settings/sysinfo.png</icon>
-          </item>
-          <item>
-            <label>$LOCALIZE[31742]</label> <!-- Dependencies -->
-            <onclick>ActivateWindow(10040,addons://dependencies/)</onclick>
-            <icon>special://skin/extras/icons/bigbox.png</icon>
           </item>
         </content>
       </control>

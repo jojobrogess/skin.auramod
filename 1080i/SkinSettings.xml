@@ -1750,6 +1750,18 @@
                         <!-- ============ -->
                         <!-- Dependencies -->
                         <!-- ============ -->
+                        <control type="button" id="98001">
+                            <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
+                            <label>A List of other Skin Related Dependencies</label> <!-- Dependencies -->
+                            <onclick>ActivateWindow(10040,addons://dependencies/)</onclick>
+                            <include>Defs_Settings_Button</include>
+                        </control>
+                        <control type="button" id="980011">
+                            <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
+                            <label>Currently Running Addons</label> <!-- Dependencies -->
+                            <onclick>ActivateWindow(10040,addons://running/)</onclick>
+                            <include>Defs_Settings_Button</include>
+                        </control>
                         <control type="radiobutton" id="9801">
                             <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                             <label>script.skin.helper.service</label>
