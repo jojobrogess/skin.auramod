@@ -175,7 +175,7 @@
                     <width>1600</width>
                     <height>50</height>
                     <aligny>bottom</aligny>
-                    <label>$INFO[Player.Process(deintmethod),[COLOR Selected]$LOCALIZE[16038]:[/COLOR] ]</label>
+                    <label>$INFO[Player.Process(videoscantype),[COLOR Selected]$LOCALIZE[16038]:[/COLOR] ]</label>
                     <font>font_statusbar</font>
                     <textcolor>panel_fg_70</textcolor>
 
