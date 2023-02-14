@@ -23,13 +23,13 @@
         <usecontrolcoords>true</usecontrolcoords>
         <itemgap>0</itemgap>
        <control type="label">
-	 <left>0</left>
+	       <left>0</left>
          <height>30</height>
          <font>font_small</font>
          <textcolor>dimgrey</textcolor>
          <label>$VAR[Label_Genre_showcase]</label>
          <scroll>false</scroll>
-	 <visible>!Skin.HasSetting(DisableNetflixView)</visible>
+	       <visible>!Skin.HasSetting(DisableNetflixView)</visible>
        </control>
         <control type="label">
           <left>0</left>
@@ -47,7 +47,7 @@
           <itemgap>0</itemgap>
           <left>0</left>
           <right>0</right>
-	  <visible>Skin.HasSetting(DisableNetflixView)</visible>
+	        <visible>Skin.HasSetting(DisableNetflixView)</visible>
           <control type="image">
             <left>0</left>
             <top>10</top>
@@ -90,10 +90,10 @@
         </control>
 
         <control type="group">
-	     <height>40</height>
-	     <top>-20</top>
-             <include>netflix_infoline</include>
-             <visible>!Skin.HasSetting(DisableNetflixView)</visible>
+          <height>40</height>
+	        <top>-20</top>
+          <include>netflix_infoline</include>
+          <visible>!Skin.HasSetting(DisableNetflixView)</visible>
         </control>
 
         <control type="group">
@@ -135,51 +135,52 @@
               <left>256</left>
               <width>$PARAM[width]</width>
               <animation effect="slide" end="-256" condition="Skin.HasSetting(DisableStarRating)">Conditional</animation>
-	      <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-        <include content="Object_Ratings">
-          <param name="directory" value="color" />
-          <param name="align" value="right" />
-          <param name="width" value="1400" />
-          <param name="rottentomatoes" value="true" />
-          <param name="imdbvotes" value="true" />
-          <param name="usermeter" value="false" />
-          <param name="imdb" value="true" />
-          <param name="tmdb" value="true" />
-          <param name="tvdb" value="true" />
-          <param name="metacritic" value="true" />
-          <param name="oscars" value="true" />
-          <param name="top250" value="false" />
-          <param name="plot" value="false" />
-          <param name="studio" value="true" />
-          <param name="studioid" value="1$PARAM[studioid_ratings]" />
-        </include>
+	            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+              <include content="Object_Ratings">
+                <param name="directory" value="color" />
+                <param name="align" value="right" />
+                <param name="width" value="1400" />
+                <param name="rottentomatoes" value="true" />
+                <param name="imdbvotes" value="true" />
+                <param name="usermeter" value="false" />
+                <param name="imdb" value="true" />
+                <param name="tmdb" value="true" />
+                <param name="tvdb" value="true" />
+                <param name="metacritic" value="true" />
+                <param name="oscars" value="true" />
+                <param name="top250" value="false" />
+                <param name="plot" value="false" />
+                <param name="studio" value="true" />
+                <param name="studioid" value="1$PARAM[studioid_ratings]" />
+              </include>
             </control>
             <control type="group">
               <top>25</top>
               <left>0</left>
               <width>$PARAM[width]</width>
-	      <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
+	            <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
               <animation effect="slide" end="-256" condition="Skin.HasSetting(DisableStarRating)">Conditional</animation>
-        <include content="Object_Ratings" condition="Window.IsVisible(DialogVideoInfo.xml)">
-          <param name="directory" value="color" />
-          <param name="align" value="left" />
-          <param name="width" value="1400" />
-          <param name="rottentomatoes" value="true" />
-          <param name="imdbvotes" value="true" />
-          <param name="usermeter" value="false" />
-          <param name="imdb" value="true" />
-          <param name="tmdb" value="true" />
-          <param name="tvdb" value="true" />
-          <param name="metacritic" value="true" />
-          <param name="oscars" value="true" />
-          <param name="top250" value="false" />
-          <param name="plot" value="false" />
-          <param name="studio" value="true" />
-          <param name="studioid" value="2$PARAM[studioid_ratings]" />
-        </include>
+              <include content="Object_Ratings" condition="Window.IsVisible(DialogVideoInfo.xml)">
+                <param name="directory" value="color" />
+                <param name="align" value="left" />
+                <param name="width" value="1400" />
+                <param name="rottentomatoes" value="true" />
+                <param name="imdbvotes" value="true" />
+                <param name="usermeter" value="false" />
+                <param name="imdb" value="true" />
+                <param name="tmdb" value="true" />
+                <param name="tvdb" value="true" />
+                <param name="metacritic" value="true" />
+                <param name="oscars" value="true" />
+                <param name="top250" value="false" />
+                <param name="plot" value="false" />
+                <param name="studio" value="true" />
+                <param name="studioid" value="2$PARAM[studioid_ratings]" />
+              </include>
             </control>
           </control>
         </control>
+
         <control type="label">
           <left>0</left>
           <right>0</right>
@@ -839,7 +840,7 @@
                   <width>100%</width>
                   <height>100%</height>
                   <texture colordiffuse="10FFFFFF" border="10" flipy="true">diffuse/landscape.png</texture>
-	          <visible>Skin.HasSetting(DisableAuraHomeLayout) + !Skin.HasSetting(DisableNetflixSubmenuBG)</visible>
+	                <visible>Skin.HasSetting(DisableAuraHomeLayout) + !Skin.HasSetting(DisableNetflixSubmenuBG)</visible>
                 </control>
 
                 <control type="group">
@@ -1286,7 +1287,7 @@
         <ondown condition="!Skin.HasSetting(HideSubmenuWidget) + [Skin.HasSetting(DisableNetflixCatWidget) | $EXP[noSubMenu]]">30222</ondown>
         <ondown condition="Skin.HasSetting(HideSubmenuWidget) + [Skin.HasSetting(DisableNetflixCatWidget) | $EXP[noSubMenu]]">330</ondown>
         <onup>300</onup>
-	<onback>300</onback>
+	      <onback>300</onback>
         <onleft>300</onleft>
         <height>620</height>
         <top>-660</top>
@@ -1701,7 +1702,7 @@
           <visible>!Player.HasVideo + $EXP[DBTvideosImage]</visible>
           <width>1400</width>
           <height>700</height>
-	  <left>500</left>
+	        <left>500</left>
           <top>0</top>
           <aspectratio scalediffuse="true" aligny="top">scale</aspectratio>
           <imagepath background="true" diffuse="Right Corner.png">$VAR[fanart_multi_fadelabel]</imagepath>
@@ -2095,13 +2096,13 @@
               </include>
             </control>
             <control type="label" id="4$PARAM[id]">
-          	<left>-10</left>
-          	<width>140</width>
-          	<label>$VAR[liked_percent_container]</label>
-          	<textcolor>green</textcolor>
-          	<align>center</align>
-          	<font>font_tiny_bold</font>
-          	<visible>Skin.HasSetting(DisableLiked) + !String.IsEmpty(Control.GetLabel(4$PARAM[id]))</visible>
+              <left>-10</left>
+            	<width>140</width>
+            	<label>$VAR[liked_percent_container]</label>
+            	<textcolor>green</textcolor>
+            	<align>center</align>
+            	<font>font_tiny_bold</font>
+            	<visible>Skin.HasSetting(DisableLiked) + !String.IsEmpty(Control.GetLabel(4$PARAM[id]))</visible>
             </control>
             <control type="group">
               <width>500</width>
@@ -2115,7 +2116,7 @@
                   <textcolor>white</textcolor>
                   <align>center</align>
                   <font>font_tiny_bold</font>
-		  <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
+		              <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,episode)</visible>
                 </control>
                 <!-- MPAA -->
                 <control type="group">
@@ -2146,14 +2147,14 @@
                   <width>100</width>
                   <height>30</height>
                   <visible>!String.IsEqual(Container($PARAM[id]).ListItem.DBType,tvshow) + [!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Duration))]</visible>
-              <control type="image">
-                <bottom>-18</bottom>
-                <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
-                <align>bottom</align>
-                <height>100%</height>
-                <width>100%</width>
-                <texture colordiffuse="dimgrey">flags/square-rounded.png</texture>
-              </control>
+                  <control type="image">
+                    <bottom>-18</bottom>
+                    <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
+                    <align>bottom</align>
+                    <height>100%</height>
+                    <width>100%</width>
+                    <texture colordiffuse="dimgrey">flags/square-rounded.png</texture>
+                  </control>
                   <control type="label" id="6115">
                     <top>15</top>
                     <left>10</left>
@@ -2166,28 +2167,28 @@
                   </control>
                 </control>
                 <!-- Season Count -->
-		<control type="group">
+		            <control type="group">
                     <width>140</width>
-		    <height>30</height>
+		                <height>30</height>
                     <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Property(TotalSeasons))</visible>
-                  <control type="image">
-                    <bottom>-17</bottom>
-		    <height>30</height>
-                    <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
-                    <align>bottom</align>
-                    <width>130</width>
-                    <texture colordiffuse="dimgrey">common/white.png</texture>
-                  </control>
-                <control type="label">
-                  <width>130</width>
-                  <textcolor>white</textcolor>
-                  <align>center</align>
-                  <font>widget_trakt_title2</font>
-                  <textcolor>grey</textcolor>
-                  <top>28</top>
-                  <label>$VAR[total_seasons_view505]</label>
+                    <control type="image">
+                      <bottom>-17</bottom>
+  		                <height>30</height>
+                      <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
+                      <align>bottom</align>
+                      <width>130</width>
+                      <texture colordiffuse="dimgrey">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                      <width>130</width>
+                      <textcolor>white</textcolor>
+                      <align>center</align>
+                      <font>widget_trakt_title2</font>
+                      <textcolor>grey</textcolor>
+                      <top>28</top>
+                      <label>$VAR[total_seasons_view505]</label>
+                    </control>
                 </control>
-               </control>
                 <!-- Aired -->
                 <control type="label">
                   <width>195</width>
@@ -2199,9 +2200,9 @@
               </control>
             </control>
           </control>
-	  <control type="label">
-	    <height>10</height>
-	  </control>
+	        <control type="label">
+            <height>10</height>
+	        </control>
           <control type="label">
             <width>680</width>
             <height>35</height>
@@ -2259,7 +2260,7 @@
               </control>
             </control>
             <control type="textbox" id="841">
-	      <top>-5</top>
+	            <top>-5</top>
               <height>75</height>
               <width>550</width>
               <label>$VAR[NetflixDetailsSpin_container]</label>
@@ -2369,7 +2370,7 @@
           <textcolor>grey</textcolor>
           <shadowcolor>black</shadowcolor>
           <font>font_xlarge_bold</font>
-	  <height>200</height>
+	        <height>200</height>
           <width>730</width>
           <align>left</align>
           <aligny>center</aligny>
@@ -2432,7 +2433,7 @@
           <itemgap>25</itemgap>
           <orientation>horizontal</orientation>
           <usecontrolcoords>true</usecontrolcoords>
-	  <visible>!String.IsEqual(ListItem.Label,Next)</visible>
+	        <visible>!String.IsEqual(ListItem.Label,Next)</visible>
           <control type="group">
             <top>10</top>
             <height>46</height>
@@ -2447,7 +2448,7 @@
             </control>
           </control>
           <control type="textbox" id="841">
-	    <top>-10</top>
+	          <top>-10</top>
             <animation effect="fade" time="150">Visible</animation>
             <height>85</height>
             <width>550</width>
@@ -2929,7 +2930,7 @@
           <ondown>$PARAM[ondown]</ondown>
           <include>Animation_FadeInOut</include>
           <animation effect="fade" start="100" end="0" time="0" condition="Container($PARAM[id]).IsUpdating">Conditional</animation>
-	  <include condition="$PARAM[circlewidget]">Object_CircleWidget</include>
+	        <include condition="$PARAM[circlewidget]">Object_CircleWidget</include>
           <include content="View_Actor_Layout" condition="!$PARAM[circlewidget]">
             <param name="id" value="$PARAM[id]" />
             <param name="infolabel" value="$PARAM[infolabel]" />
@@ -2962,11 +2963,11 @@
 
   <!-- cr to Titan Bingie mode-->
   <include name="Object_CircleWidget">
-       <top>40</top>
-       <height>350</height>
-       <preloaditems>2</preloaditems>
-       <orientation>horizontal</orientation>
-       <scrolltime tween="quadratic">400</scrolltime>
+        <top>40</top>
+        <height>350</height>
+        <preloaditems>2</preloaditems>
+        <orientation>horizontal</orientation>
+        <scrolltime tween="quadratic">400</scrolltime>
         <itemlayout height="400" width="300">
                   <control type="group">
                           <height>250</height>
@@ -2984,8 +2985,8 @@
                           <width>250</width>
                           <include>Focus_Zoom_Animation</include>
 		          <animation type="Focus" reversible="false">
-			      <effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
-			      <effect type="zoom" end="95.2380952" time="225" tween="sine" delay="100" easing="out" center="auto" />
+    			      <effect type="zoom" end="105" time="75" tween="sine" easing="out" center="auto" />
+    			      <effect type="zoom" end="95.2380952" time="225" tween="sine" delay="100" easing="out" center="auto" />
 		          </animation>
                           <control type="group">
                                   <include content="Circle_CastWidget">
@@ -3002,12 +3003,12 @@
             <param name="colordiffuse" default="white" />
             <param name="autoscroll" default="true" />
             <param name="bordersize_bg" default="4" />
-	    <definition>
+	          <definition>
                 <control type="image">
                         <description>Fallback aspect keep</description>
                         <bordertexture colordiffuse="$PARAM[colordiffuse]">diffuse/roundmask.png</bordertexture>
                         <texture background="true" diffuse="diffuse/roundmask.png" fallback="defaultactor.png">$VAR[Image_Poster]</texture>
-			<aspectratio>stretch</aspectratio>
+			                  <aspectratio>stretch</aspectratio>
                         <bordersize>$PARAM[bordersize_bg]</bordersize>
                 </control>
 
@@ -3027,7 +3028,7 @@
                                 <label>$INFO[ListItem.Label,[B],[/B]][CR][COLOR=grey]$INFO[ListItem.Label2][/COLOR]</label>
                         </control>
                 </control>
-	    </definition>
+	            </definition>
         </include>
 
 
@@ -3501,6 +3502,7 @@
       </control>
     </control>
   </include>
+
   <include name="Object_BigPoster">
     <param name="container" default="" />
     <param name="visible" default="!Container.IsUpdating" />
@@ -3529,7 +3531,14 @@
               <control type="image">
                 <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
                 <texture background="true" fallback="DefaultAddonImages.png" diffuse="diffuse/bigposter.png">$PARAM[variable]</texture>
+                <visible>!String.Contains(ListItem.FolderPath,Genres)</visible>
               </control>
+              <control type="image">
+              <bordersize>80</bordersize>
+              <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
+              <texture background="true" colordiffuse="PosterFront" fallback="DefaultFolder.png" diffuse="diffuse/bigposter.png">$VAR[Image_GenreIcons_Path]$INFO[$PARAM[container]ListItem.Label,,.png]</texture>
+              <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+            </control>
             </control>
           </control>
           <control type="group">
@@ -3544,7 +3553,6 @@
               <texture background="true" colordiffuse="PosterFront" fallback="DefaultAddonNone.png" diffuse="diffuse/bigposter.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
               <visible>[!Container.Content(genres) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(years) + !Container.Content(directors)] | ListItem.IsParentFolder</visible>
               <visible>!String.Contains(ListItem.Path,plugin://plugin.video.seren)</visible>
-
             </control>
             <control type="image">
               <bordersize>80</bordersize>
@@ -3565,12 +3573,12 @@
               <font>font_bigposter_text</font>
               <visible>[Container.Content(years) | Container.Content(directors) | Container.Content(countries)] + !ListItem.IsParentFolder</visible>
             </control>
-            <control type="image">
+      <!-- extra      <control type="image">
               <bordersize>80</bordersize>
               <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
               <texture background="true" colordiffuse="PosterFront" fallback="DefaultFolder.png" diffuse="diffuse/bigposter.png">$VAR[Image_GenreIcons_Path]$INFO[$PARAM[container]ListItem.Label,,.png]</texture>
               <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
-            </control>
+            </control> -->
             <control type="image">
               <bordersize>80</bordersize>
               <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
@@ -3591,6 +3599,51 @@
       </control>
     </definition>
   </include>
+
+  <include name="Object_MediumPoster">
+    <param name="container" default="" />
+    <param name="visible" default="!Container.IsUpdating" />
+    <param name="variable" default="$VAR[Image_Poster]" />
+    <param name="height" default="550" />
+    <param name="width" default="350" />
+    <param name="discart" default="false" />
+    <param name="aspect" default="keep" />
+    <definition>
+      <control type="group">
+        <left>0</left>
+        <top>0</top>
+        <width>400</width>
+        <height>$PARAM[height]</height>
+        <visible>$PARAM[visible]</visible>
+        <control type="group">
+          <visible>!Window.IsVisible(MyPics.xml)</visible>
+          <control type="group">
+            <control type="image">
+              <aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
+              <texture background="true" fallback="DefaultAddonImages.png" diffuse="diffuse/bigposter.png">$PARAM[variable]</texture>
+              <visible>[!$PARAM[container]ListItem.IsParentFolder + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(season.poster))]]</visible>
+            </control>
+            <control type="group">
+              <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,DefaultIcon)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(season.poster))]]</visible>
+              <control type="image">
+                <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
+                <texture background="true" fallback="DefaultAddonImages.png" diffuse="diffuse/bigposter.png">$PARAM[variable]</texture>
+              </control>
+            </control>
+          </control>
+          <control type="group">
+            <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,DefaultIcon)</visible>
+            <control type="image">
+              <aspectratio aligny="center" scalediffuse="false">center</aspectratio>
+              <texture background="true" colordiffuse="PosterFront" fallback="DefaultAddonNone.png" diffuse="diffuse/bigposter.png">$VAR[serenicons]</texture>
+              <visible>String.Contains(ListItem.Path,plugin://plugin.video.seren)</visible>
+            </control>
+          </control>
+        </control>
+      </control>
+    </definition>
+  </include>
+
   <include name="Object_Flags">
     <param name="container" default="" />
     <param name="source" default="ListItem." />
@@ -3623,6 +3676,7 @@
       </include>
     </definition>
   </include>
+  
   <include name="Object_Flags_Content">
     <param name="container" default="" />
     <param name="source" default="ListItem." />
@@ -4142,7 +4196,7 @@
         </control>
         <control type="label">
           <textcolor>main_fg_70</textcolor>
-	  <left>-10</left>
+	        <left>-10</left>
           <top>12</top>
           <width>auto</width>
           <height>28</height>
@@ -4157,7 +4211,7 @@
           <width>40</width>
           <height>32</height>
           <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/imdbicon.png</texture>
-	  <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
+	        <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
           <visible>$PARAM[imdb]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
         </control>
@@ -4169,7 +4223,7 @@
           <align>right</align>
           <font>font_tiny</font>
           <label>$VAR[imdb_ratings] $VAR[imdb_votes]</label>
-	  <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
+	        <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB) + Skin.HasSetting(Ratings.IMDBVotes)</visible>
         </control>
         <control type="label">
@@ -4180,7 +4234,7 @@
           <align>right</align>
           <font>font_tiny</font>
           <label>$VAR[imdb_ratings]</label>
-	  <visible>[$EXP[tmdbu] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating))]</visible>
+	        <visible>[$EXP[tmdbu] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating))]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB) + !Skin.HasSetting(Ratings.IMDBVotes)</visible>
         </control>
         <control type="image">
@@ -4594,7 +4648,7 @@
         </control>
         <control type="label">
           <textcolor>main_fg_70</textcolor>
-	  <left>-10</left>
+	        <left>-10</left>
           <top>12</top>
           <width>auto</width>
           <height>28</height>
@@ -4609,7 +4663,7 @@
           <width>40</width>
           <height>32</height>
           <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/ratings/imdbicon.png</texture>
-	  <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
+	        <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
           <visible>$PARAM[imdb]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB)</visible>
         </control>
@@ -4621,7 +4675,7 @@
           <align>right</align>
           <font>font_tiny</font>
           <label>$VAR[imdb_ratings] $VAR[imdb_votes]</label>
-	  <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
+	        <visible>[$EXP[tmdbu] + [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Votes))]]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB) + Skin.HasSetting(Ratings.IMDBVotes)</visible>
         </control>
         <control type="label">
@@ -4632,7 +4686,7 @@
           <align>right</align>
           <font>font_tiny</font>
           <label>$VAR[imdb_ratings]</label>
-	  <visible>[$EXP[tmdbu] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating))]</visible>
+	        <visible>[$EXP[tmdbu] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.IMDb_Rating))]</visible>
           <visible>!Skin.HasSetting(Ratings.IMDB) + !Skin.HasSetting(Ratings.IMDBVotes)</visible>
         </control>
         <control type="image">
@@ -5020,7 +5074,7 @@
         </control>
         <control type="label">
           <textcolor>main_fg_70</textcolor>
-	  <left>-10</left>
+	        <left>-10</left>
           <top>12</top>
           <width>auto</width>
           <height>28</height>
@@ -6447,24 +6501,24 @@
       <control type="grouplist">
         <orientation>horizontal</orientation>
         <usecontrolcoords>true</usecontrolcoords>
-        <itemgap>0</itemgap>
-        <left>0</left>
         <right>$PARAM[titleright]</right>
+
         <control type="group">
           <width>200</width>
           <left>-5</left>
           <top>-20</top>
           <visible>!$EXP[MainSubMenuHasFocus]</visible>
-          <visible>!Skin.HasSetting(DisableStarRating) | [Skin.HasSetting(DisableLiked) + String.IsEmpty(Control.GetLabel(5949))]</visible>
+          <visible>!Skin.HasSetting(DisableStarRating) | [Skin.HasSetting(DisableLiked) + !String.IsEmpty(Control.GetLabel(5949))]</visible>
           <include content="Object_StarRating">
             <param name="height" value="50" />
             <param name="width" value="50" />
             <param name="rating_prop" value="ListItem.Rating" />
           </include>
         </control>
+
+        <!-- Rating -->
         <control type="label" id="5949">
-          <left>-10</left>
-          <width>140</width>
+          <left>20</left>
           <label>$VAR[liked_percent]</label>
           <textcolor>green</textcolor>
           <align>center</align>
@@ -6472,51 +6526,66 @@
           <visible>Skin.HasSetting(DisableLiked) + !String.IsEmpty(Control.GetLabel(5949))</visible>
           <visible>!$EXP[MainSubMenuHasFocus]</visible>
         </control>
+        
         <control type="group">
           <width>auto</width> <!--500-->
           <control type="grouplist">
             <orientation>horizontal</orientation>
-            <itemgap>10</itemgap>
+            <itemgap>5</itemgap>
+
             <!-- Year -->
             <control type="label">
               <width>60</width>
+              <left>30</left>
               <label>$INFO[ListItem.Year]</label>
               <textcolor>white</textcolor>
-              <align>center</align>
+              <align>left</align>
               <font>font_tiny_bold</font>
               <visible>!String.IsEmpty(ListItem.Year) + !String.IsEqual(ListItem.DBType,episode)</visible>
             </control>
+
             <!-- MPAA -->
             <control type="group">
-              <width>120</width>
+              <width min="30" max="80">auto</width> <!--500-->
               <height>30</height>
               <visible>!String.IsEmpty(Control.GetLabel(6115))</visible>
               <control type="image">
-                <bottom>-18</bottom>
+                <bottom>-17</bottom>
                 <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
+                <left>-5</left>
                 <align>bottom</align>
                 <height>100%</height>
-                <width>100%</width>
-                <texture colordiffuse="dimgrey">flags/flag_box_rating_classic.png</texture>
+                <width>30</width>
+                <texture colordiffuse="dimgrey">flags/flag_rating_classic.png</texture>
               </control>
-              <control type="label" id="6115">
-                <top>15</top>
-                <left>35</left>
+              <control type="button" id="6115">
+                <bottom>-18</bottom>
+                <left>21</left>
+                <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
+                <align>left</align>
+                <height>90%</height>
+                <width min="30" max="120">auto</width>
+                <texturenofocus colordiffuse="dimgrey">flags/flag_box.png</texturenofocus>
+                <right>50</right>
+                <top>18</top>
                 <height>100%</height>
-                <width>70%</width>
+                <width>auto</width>
                 <font>widget_trakt_title2</font>
                 <textcolor>grey</textcolor>
                 <scroll>true</scroll>
                 <label fallback="N/A">$VAR[MPAA]</label>
+                <textoffsetx>5</textoffsetx>
               </control>
             </control>
+
             <!-- Duration -->
             <control type="group">
               <width>95</width>
               <height>30</height>
               <visible>[[!String.IsEmpty(ListItem.Duration) | !String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Duration))] + !String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,season)] | String.Contains(ListItem.FolderPath,plugin.video.youtube)</visible>
               <control type="image">
-                <bottom>-18</bottom>
+                <bottom>-17</bottom>
+                <left>15</left>
                 <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
                 <align>bottom</align>
                 <height>100%</height>
@@ -6524,8 +6593,8 @@
                 <texture colordiffuse="dimgrey">flags/square-rounded.png</texture>
               </control>
               <control type="label" id="61115">
-                <top>15</top>
-                <left>10</left>
+                <top>16</top>
+                <left>25</left>
                 <height>100%</height>
                 <width>90%</width>
                 <font>widget_trakt_title2</font>
@@ -6534,31 +6603,36 @@
                 <label>$VAR[infoline_duration]</label>
               </control>
             </control>
-            <!-- Season Count -->
+
             <control type="group">
-              <width>140</width>
+              <width>180</width>
               <height>30</height>
               <visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
-              <control type="image">
+              <!-- Season Count -->
+              <control type="button">
                 <bottom>-17</bottom>
+                <left>20</left>
                 <animation effect="fade" time="0" end="75" condition="true">Conditional</animation>
                 <align>bottom</align>
                 <height>100%</height>
-                <width>100%</width>
-                <texture colordiffuse="dimgrey">flags/square-rounded.png</texture>
-              </control>
-              <control type="label">
-                <top>28</top>
+                <width max="175">auto</width>
+                <texturenofocus colordiffuse="dimgrey">flags/square.png</texturenofocus>
+                <top>16</top>
                 <textcolor>white</textcolor>
                 <align>center</align>
                 <font>widget_trakt_title2</font>
+                <textoffsetx>20</textoffsetx>
+                <width>auto</width>
                 <textcolor>grey</textcolor>
                 <label>$VAR[total_seasons]</label>
                 <visible>String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
               </control>
             </control>
+
+
             <!-- Aired -->
             <control type="label">
+              <left>30</left>
               <label>$LOCALIZE[31789]: $INFO[ListItem.Premiered(dd MMM yyyy)]</label> <!-- Aired -->
               <textcolor>$VAR[ColorHighlight2]</textcolor>
               <font>font_tiny_bold</font>
@@ -6566,6 +6640,7 @@
               <visible>!Control.IsVisible(502) + !Control.HasFocus(300) + !Control.HasFocus(302) + !Control.HasFocus(30222)</visible>
             </control>
             <control type="label">
+              <left>30</left>
               <width>auto</width>
               <label>$VAR[Label_Info_NextAired_Status]</label>
               <font>font_tiny</font>
@@ -6577,6 +6652,7 @@
       </control>
     </control>
   </include>
+
   <!-- Info Details Spinner @cartmandos -->
   <include name="Details_Spinner">
     <control type="grouplist">
@@ -6874,7 +6950,7 @@
         <onright condition="!Integer.IsGreater(Container(5600).NumItems,0)">5600</onright>
         <onright>SetFocus(5600)</onright>
         <onback>ActivateWindow(1139)</onback>
-	<ondown>1007</ondown>
+        <ondown>1007</ondown>
         <!-- Space / Backspace Row -->
         <include content="SearchKeyboardRow">
           <param name="id" value="1000" />
@@ -7009,10 +7085,10 @@
           <height>50</height>
           <visible>Skin.HasSetting(DisableAuraHomeLayout)</visible>
         </control>
-	<control type="label" id="336">
-	   <height>50</height>
-	   <visible>!Skin.HasSetting(SubmenuLabel) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
-	</control>
+      	<control type="label" id="336">
+      	   <height>50</height>
+      	   <visible>!Skin.HasSetting(SubmenuLabel) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
+      	</control>
         <include condition="!String.IsEmpty(Skin.String(CustomSearchTerm))">skinshortcuts-template-searchlist</include>
       </control>
     </control>
@@ -8591,7 +8667,7 @@
         <top>380</top>
         <width>100%</width>
         <height>100%</height>
- 	<onup>Control.SetFocus(9000,$INFO[Container(9001).Position])</onup>
+ 	      <onup>Control.SetFocus(9000,$INFO[Container(9001).Position])</onup>
         <ondown>Control.SetFocus(9002,$INFO[Container(9001).Position])</ondown>
         <orientation>horizontal</orientation>
         <scrolltime>0</scrolltime>
@@ -8693,9 +8769,9 @@
             <thumb>special://skin/extras/icons/viewmode.png</thumb>
           </item>
           <item>
-            <label>$LOCALIZE[31504]</label> <!-- My Lists -->
-            <onclick>ActivateWindow(1164)</onclick>
-            <thumb>special://skin/extras/icons/clipboard.png</thumb>
+            <label>Category Widget Size</label> <!-- Category Widget Size -->
+            <onclick>ActivateWindow(1140)</onclick>>
+            <thumb>defaultsets.png</thumb>
           </item>
         </content>
       </control>
@@ -8815,9 +8891,9 @@
             <icon>settings/sysinfo.png</icon>
           </item>
           <item>
-            <label>$LOCALIZE[31742]</label> <!-- Dependencies -->
-            <onclick>ActivateWindow(10040,addons://dependencies/)</onclick>
-            <icon>special://skin/extras/icons/bigbox.png</icon>
+            <label>$LOCALIZE[31504]</label> <!-- My Lists -->
+            <onclick>ActivateWindow(1164)</onclick>
+            <thumb>special://skin/extras/icons/clipboard.png</thumb>
           </item>
         </content>
       </control>

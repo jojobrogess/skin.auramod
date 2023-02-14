@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-     <variable name="infoslidestudio">
-	<value condition="String.Contains(ListItem.Studio,/)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.Name),resource://resource.images.studios.coloured/,.png]</value>
-	<value condition="!String.Contains(ListItem.Studio,/)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
-     </variable>
-     <variable name="serenicons">
-	<value condition="!Skin.HasSetting(SerenIcons) + String.StartsWith(ListItem.Icon,DefaultFolder)">DefaultFolder.png</value>
-	<value condition="!Skin.HasSetting(SerenIcons)">ListItem.Icon</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesHome)">special://skin/media/exuary/movies.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsHome)">special://skin/media/exuary/tvshows.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myShows)">special://skin/media/exuary/mytvshows.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myMovies)">special://skin/media/exuary/mymovies.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myFiles)">special://skin/media/exuary/downloads.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=searchMenu)">special://skin/media/exuary/search.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=toolsMenu)">special://skin/media/exuary/tools.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsPopular&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesPopular&page=1)]">special://skin/media/exuary/most-popular.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsRecommended) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesRecommended)]">special://skin/extras/openmeta/traktrecommendations.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsTrending&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesTrending&page=1)]">special://skin/extras/openmeta/trending.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsPlayed&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesPlayed&page=1)]">special://skin/extras/openmeta/trakt.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsWatched&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesWatched&page=1)]">special://skin/media/exuary/people-watching.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsCollected&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesCollected&page=1)]">special://skin/extras/openmeta/traktcollection.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsAnticipated&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesAnticipated&page=1)]">special://skin/extras/openmeta/trakt.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesBoxOffice)">special://skin/media/exuary/box-office.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesUpdated&page=1)">special://skin/extras/openmeta/trakt.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsUpdated&page=1)">special://skin/media/exuary/latest-episodes.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=tvGenres) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieGenres&page=1)]">special://skin/extras/openmeta/genres.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showYears) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieYears)]">special://skin/media/exuary/years.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsByActor) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieByActor)]">special://skin/media/exuary/people-search.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsSearchHistory) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesSearchHistory)]">special://skin/media/exuary/search.png</value>
+    <variable name="infoslidestudio">
+    	<value condition="String.Contains(ListItem.Studio,/)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.Name),resource://resource.images.studios.coloured/,.png]</value>
+    	<value condition="!String.Contains(ListItem.Studio,/)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
+    </variable>
+    <variable name="serenicons">
+    	<value condition="!Skin.HasSetting(SerenIcons) + String.StartsWith(ListItem.Icon,DefaultFolder)">DefaultFolder.png</value>
+    	<value condition="!Skin.HasSetting(SerenIcons)">ListItem.Icon</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesHome)">special://skin/media/exuary/movies.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsHome)">special://skin/media/exuary/tvshows.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myShows)">special://skin/media/exuary/mytvshows.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myMovies)">special://skin/media/exuary/mymovies.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myFiles)">special://skin/media/exuary/downloads.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=searchMenu)">special://skin/media/exuary/search.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=toolsMenu)">special://skin/media/exuary/tools.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsPopular&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesPopular&amp;page=1)]">special://skin/media/exuary/most-popular.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsRecommended) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesRecommended)]">special://skin/extras/openmeta/traktrecommendations.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsTrending&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesTrending&amp;page=1)]">special://skin/extras/openmeta/trending.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsPlayed&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesPlayed&amp;page=1)]">special://skin/extras/openmeta/trakt.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsWatched&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesWatched&amp;page=1)]">special://skin/media/exuary/people-watching.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsCollected&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesCollected&amp;page=1)]">special://skin/extras/openmeta/traktcollection.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsAnticipated&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesAnticipated&amp;page=1)]">special://skin/extras/openmeta/trakt.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesBoxOffice)">special://skin/media/exuary/box-office.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesUpdated&amp;page=1)">special://skin/extras/openmeta/trakt.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsUpdated&amp;page=1)">special://skin/media/exuary/latest-episodes.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=tvGenres) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieGenres&amp;page=1)]">special://skin/extras/openmeta/genres.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showYears) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieYears)]">special://skin/media/exuary/years.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsByActor) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=movieByActor)]">special://skin/media/exuary/people-search.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsSearchHistory) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesSearchHistory)]">special://skin/media/exuary/search.png</value>
         <value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsNetworks)">special://skin/media/exuary/networks.png</value>
         <value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsNew)">special://skin/media/exuary/new-tvshows.png</value>
         <value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=onDeckShows) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=onDeckMovies)]">special://skin/extras/openmeta/aired.png</value>
         <value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyCollection) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesMyCollection)]">special://skin/extras/openmeta/traktcollection.png</value>
         <value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyWatchlist) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=moviesMyWatchlist)]">special://skin/extras/openmeta/traktwatchlist.png</value>
-        <value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&actionArgs=shows) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&actionArgs=movies)]">special://skin/extras/openmeta/traktlikedlists.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsNextUp)">special://skin/extras/openmeta/traktnextepisodes.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myUpcomingEpisodes)">special://skin/extras/openmeta/airing.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyProgress)">special://skin/extras/openmeta/aired.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyRecentEpisodes)">special://skin/extras/openmeta/traktcalendar.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&amp;actionArgs=shows)">special://skin/extras/openmeta/traktlikedlists.png</value>
-	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myWatchedEpisodes&page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myWatchedMovies&page=1)]">special://skin/extras/openmeta/trakt.png</value>
-	<value>ListItem.Icon</value>
-     </variable>
+        <value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&amp;actionArgs=shows) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&amp;actionArgs=movies)]">special://skin/extras/openmeta/traktlikedlists.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsNextUp)">special://skin/extras/openmeta/traktnextepisodes.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myUpcomingEpisodes)">special://skin/extras/openmeta/airing.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyProgress)">special://skin/extras/openmeta/aired.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=showsMyRecentEpisodes)">special://skin/extras/openmeta/traktcalendar.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myTraktLists&amp;actionArgs=shows)">special://skin/extras/openmeta/traktlikedlists.png</value>
+    	<value condition="Skin.HasSetting(SerenIcons) + [String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myWatchedEpisodes&amp;page=1) | String.IsEqual(ListItem.FileNameAndPath,plugin://plugin.video.seren/?action=myWatchedMovies&amp;page=1)]">special://skin/extras/openmeta/trakt.png</value>
+    	<value>ListItem.Icon</value>
+    </variable>
 
-     <variable name="weather_radar">
-	<value condition="Skin.HasSetting(EnableOzWetherRadar)">special://profile/addon_data/weather.ozweather/currentloop/$INFO[Window(2600).Property(Radar)]/</value>
-	<value condition="!Skin.HasSetting(EnableOzWetherRadar)">special://masterprofile/addon_data/scripts/weather/</value>
-     </variable>
+    <variable name="weather_radar">
+    	<value condition="Skin.HasSetting(EnableOzWetherRadar)">special://profile/addon_data/weather.ozweather/currentloop/$INFO[Window(2600).Property(Radar)]/</value>
+    	<value condition="!Skin.HasSetting(EnableOzWetherRadar)">special://masterprofile/addon_data/scripts/weather/</value>
+    </variable>
 
-     <variable name="widgetliveart">
-	<value condition="!Skin.HasSetting(EnableWidgetLiveIcon)">$INFO[ListItem.Icon]</value>
-	<value condition="Skin.HasSetting(EnableWidgetLiveIcon)">$INFO[ListItem.Art(thumb)]</value>
-     </variable>
-     <variable name="Image_Clearart_Hub">
-	<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
-	<value condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Clearart))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Clearart)]</value>
+    <variable name="widgetliveart">
+    	<value condition="!Skin.HasSetting(EnableWidgetLiveIcon)">$INFO[ListItem.Icon]</value>
+    	<value condition="Skin.HasSetting(EnableWidgetLiveIcon)">$INFO[ListItem.Art(thumb)]</value>
+    </variable>
+    <variable name="Image_Clearart_Hub">
+    	<value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+    	<value condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Clearart))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Clearart)]</value>
         <value condition="String.IsEmpty(ListItem.Art(Clearart))">$INFO[ListItem.Art(clearlogo)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Clearlogo))">$INFO[Window(Home).Property(TMDBHelper.ListItem.Clearlogo)]</value>
-     </variable>
-     <variable name="Image_Clearart_Widget">
+    </variable>
+    <variable name="Image_Clearart_Widget">
         <value condition="!String.IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
         <value condition="String.IsEmpty(ListItem.Art(clearart)) + !String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
         <value condition="String.IsEmpty(ListItem.Art(tvshow.clearart)) + !String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
         <value>$INFO[ListItem.Art(fanart)]</value>
-     </variable>
+    </variable>
 
-     <include name="fanart_multi_1505">
-     <control type="fadelabel" id="398095">
-        <description>Randomizer for plugin-free multiple fanart</description>
-        <top>-1000</top> <!-- Don't need to see it, but can't change its visibility. Put it off screen -->
-        <width>1</width>
-        <height>1</height>
-        <info>Container(1505).ListItem.Art(fanart)</info>
-        <info>Container(1505).ListItem.Art(fanart1)</info>
-        <info>Container(1505).ListItem.Art(fanart2)</info>
-        <info>Container(1505).ListItem.Art(fanart3)</info>
-        <!-- ... repeat for each numbered fanart -->
-        <!-- tvshow.fanart are filled with the series fanart when navigating season and episode lists -->
-        <randomize>false</randomize>
-	<include>Defs_PauseAtEnd</include>
-        <!-- No scrolling so only the pauseatend above (plus a short fade-in) affects length of time each
-                image is shown -->
-        <scroll>false</scroll>
-        <scrollout>false</scrollout>
-        <!-- Resets the timer when navigating to a new item, so each item's first visible fanart will
-                show for the full amount of time -->
-        <resetonlabelchange>true</resetonlabelchange>
-   </control>
+    <include name="fanart_multi_1505">        
+        <control type="fadelabel" id="398095">
+            <description>Randomizer for plugin-free multiple fanart</description>
+            <top>-1000</top> <!-- Don't need to see it, but can't change its visibility. Put it off screen -->
+            <width>1</width>
+            <height>1</height>
+            <info>Container(1505).ListItem.Art(fanart)</info>
+            <info>Container(1505).ListItem.Art(fanart1)</info>
+            <info>Container(1505).ListItem.Art(fanart2)</info>
+            <info>Container(1505).ListItem.Art(fanart3)</info>
+            <!-- ... repeat for each numbered fanart -->
+            <!-- tvshow.fanart are filled with the series fanart when navigating season and episode lists -->
+            <randomize>false</randomize>
+    	<include>Defs_PauseAtEnd</include>
+            <!-- No scrolling so only the pauseatend above (plus a short fade-in) affects length of time each
+                    image is shown -->
+            <scroll>false</scroll>
+            <scrollout>false</scrollout>
+            <!-- Resets the timer when navigating to a new item, so each item's first visible fanart will
+                    show for the full amount of time -->
+            <resetonlabelchange>true</resetonlabelchange>
+       </control>
    </include> 
 
 
 
-     <include name="fanart_multi">
-     <control type="fadelabel" id="398045">
-        <description>Randomizer for plugin-free multiple fanart</description>
-        <top>-1000</top> <!-- Don't need to see it, but can't change its visibility. Put it off screen -->
-        <width>1</width>
-        <height>1</height>
-        <info>ListItem.Art(fanart)</info>
-        <info>ListItem.Art(fanart1)</info>
-        <info>ListItem.Art(fanart2)</info>
-        <info>ListItem.Art(fanart3)</info>
-        <!-- ... repeat for each numbered fanart -->
-        <!-- tvshow.fanart are filled with the series fanart when navigating season and episode lists -->
-        <randomize>false</randomize>
-	<include>Defs_PauseAtEnd</include>
-        <!-- No scrolling so only the pauseatend above (plus a short fade-in) affects length of time each
-                image is shown -->
-        <scroll>false</scroll>
-        <scrollout>false</scrollout>
-        <!-- Resets the timer when navigating to a new item, so each item's first visible fanart will
-                show for the full amount of time -->
-        <resetonlabelchange>true</resetonlabelchange>
-   </control>
-   </include> 
-   <variable name="fanart_multi_fadelabel">
-       <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(ListItem.Art(fanart1)) + !String.IsEmpty(Control.GetLabel(398045))">$INFO[Control.GetLabel(398045)]</value>
-       <value>$VAR[Spotlight_Fanart]</value>
-   </variable>
-   <variable name="fanart_multi_fadelabel_1505">
-       <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(ListItem.Art(fanart1)) + !String.IsEmpty(Control.GetLabel(398095))">$INFO[Control.GetLabel(398095)]</value>
-       <value>$INFO[Container(1505).ListItem.Art(fanart)]</value>
-   </variable>
-   <variable name="loading_spinner">
-       <value condition="String.IsEmpty(Skin.String(loadingspinner.icon))">netflix/loading.gif</value>
-       <value condition="!String.IsEmpty(Skin.String(loadingspinner.icon))">$INFO[Skin.String(loadingspinner.icon)]</value>
-   </variable>
-   <variable name="loading_widget">
-       <value condition="String.IsEqual(Container(505).ListItem.Property(widgetAspect),Poster)">special://skin/media/dialogs/loading_poster.png</value>
-       <value condition="!String.IsEqual(Container(505).ListItem.Property(widgetAspect),Poster)">special://skin/media/dialogs/loading_landscape.png</value>
-   </variable>
-   <variable name="movie_list_background">
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31834])">special://skin/media/exuary/movielist/dunkirk.jpg</value> <!-- 2018 - Oscar Nominees & Winners -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31831])">special://skin/media/exuary/movielist/thegodfather.jpg</value> <!-- Academy Awards - Best Picture Winners -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31833])">special://skin//media/exuary/movielist/shapeofwater.jpg</value> <!-- 2018 - Golden Globe Nominees & Winners -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31835])">special://skin/media/exuary/movielist/shawshank.jpg</value> <!-- IMDB: Top Rated Movies -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31836])">special://skin/media/exuary/movielist/thedarknight.jpg</value> <!-- Reddit Top 250 (2018 Edition) -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31832])">special://skin/media/exuary/movielist/blackpanther.jpg</value> <!-- Rotten Tomatoes: Best of 2018 -->
+    <include name="fanart_multi">
+        <control type="fadelabel" id="398045">
+            <description>Randomizer for plugin-free multiple fanart</description>
+            <top>-1000</top> <!-- Don't need to see it, but can't change its visibility. Put it off screen -->
+            <width>1</width>
+            <height>1</height>
+            <info>ListItem.Art(fanart)</info>
+            <info>ListItem.Art(fanart1)</info>
+            <info>ListItem.Art(fanart2)</info>
+            <info>ListItem.Art(fanart3)</info>
+            <!-- ... repeat for each numbered fanart -->
+            <!-- tvshow.fanart are filled with the series fanart when navigating season and episode lists -->
+            <randomize>false</randomize>
+    	<include>Defs_PauseAtEnd</include>
+            <!-- No scrolling so only the pauseatend above (plus a short fade-in) affects length of time each
+                    image is shown -->
+            <scroll>false</scroll>
+            <scrollout>false</scrollout>
+            <!-- Resets the timer when navigating to a new item, so each item's first visible fanart will
+                    show for the full amount of time -->
+            <resetonlabelchange>true</resetonlabelchange>
+       </control>
+    </include> 
+    <variable name="fanart_multi_fadelabel">
+        <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(ListItem.Art(fanart1)) + !String.IsEmpty(Control.GetLabel(398045))">$INFO[Control.GetLabel(398045)]</value>
+        <value>$VAR[Spotlight_Fanart]</value>
+    </variable>
+    <variable name="fanart_multi_fadelabel_1505">
+        <value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !String.IsEmpty(ListItem.Art(fanart1)) + !String.IsEmpty(Control.GetLabel(398095))">$INFO[Control.GetLabel(398095)]</value>
+        <value>$INFO[Container(1505).ListItem.Art(fanart)]</value>
+    </variable>
+    <variable name="loading_spinner">
+        <value condition="String.IsEmpty(Skin.String(loadingspinner.icon))">netflix/loading.gif</value>
+        <value condition="!String.IsEmpty(Skin.String(loadingspinner.icon))">$INFO[Skin.String(loadingspinner.icon)]</value>
+    </variable>
+    <variable name="loading_widget">
+        <value condition="String.IsEqual(Container(505).ListItem.Property(widgetAspect),Poster)">special://skin/media/dialogs/loading_poster.png</value>
+        <value condition="!String.IsEqual(Container(505).ListItem.Property(widgetAspect),Poster)">special://skin/media/dialogs/loading_landscape.png</value>
+    </variable>
+    <variable name="movie_list_background">
+        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31834])">special://skin/media/exuary/movielist/dunkirk.jpg</value> <!-- 2018 - Oscar Nominees & Winners -->
+	    <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31831])">special://skin/media/exuary/movielist/thegodfather.jpg</value> <!-- Academy Awards - Best Picture Winners -->
+	    <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31833])">special://skin//media/exuary/movielist/shapeofwater.jpg</value> <!-- 2018 - Golden Globe Nominees & Winners -->
+	    <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31835])">special://skin/media/exuary/movielist/shawshank.jpg</value> <!-- IMDB: Top Rated Movies -->
+	    <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31836])">special://skin/media/exuary/movielist/thedarknight.jpg</value> <!-- Reddit Top 250 (2018 Edition) -->
+	    <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31832])">special://skin/media/exuary/movielist/blackpanther.jpg</value> <!-- Rotten Tomatoes: Best of 2018 -->
    </variable>
    <variable name="tv_list_background">
         <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31837])">special://skin/media/exuary/tvlist/sopranos.jpg</value> <!-- IMDB: Top Rated TV Shows -->
@@ -195,12 +195,14 @@
         <value condition="!String.IsEmpty(ListItem.Art(fanart)) + [[!Container.Content(videos) + !Container.Content(episodes)] | !String.IsEmpty(ListItem.Property(PlayAll)) | String.IsEqual(ListItem.DBType,movie)] + !Window.IsVisible(home)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart)) + Window.IsVisible(home) + [String.IsEqual(ListItem.Label,ListItem.TvShowTitle) | String.IsEmpty(ListItem.TvShowTitle) | Skin.HasSetting(PreferFanartHome) | !String.IsEmpty(ListItem.Property(airday))]">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
+        <value condition="String.IsEmpty(ListItem.Art(landscape))">$VAR[Image_GenreIcons]</value>
+        <value condition="String.IsEmpty(Listitem.Property(icon))">$VAR[Image_GenreIcons]</value>
         <value condition="[!Control.HasFocus(5055) + !Control.IsVisible(505)] + !String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
         <value condition="[!Control.HasFocus(5055) + !Control.IsVisible(505)] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
         <value condition="!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(seasons) + !Control.HasFocus(5055) + !Control.IsVisible(505)">$INFO[ListItem.Icon]</value>
     </variable>
 
-    <variable name="Image_MainMenu_fanart_aurahub"> 
+    <variable name="Image_MainMenu_fanart_aurahub">
         <value condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Container(5055).ListItem.Art(fanart)) + Control.IsVisible(5055)">$INFO[Container(5055).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Container(5056).ListItem.Art(fanart)) + Control.IsVisible(5056)">$INFO[Container(5056).ListItem.Art(fanart)]</value>
         <value condition="!String.IsEmpty(Container(6051).ListItem.Art(fanart)) + Control.IsVisible(6051)">$INFO[Container(6051).ListItem.Art(fanart)]</value>
@@ -220,16 +222,16 @@
         <value>$VAR[Image_MainMenu_fanart]</value>
     </variable>
     <variable name="Image_MainMenu_fanart"> 
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[20343])">special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value> <!-- TV shows -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[20342])">special://skin/extras/backgrounds/movies-mainmenu-bg.jpg</value> <!-- Movies -->
-	<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31103])">special://skin/extras/backgrounds/live-tv-mainmenu-bg.jpg</value> <!-- Live TV -->
+        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[20343])">special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value> <!-- TV shows -->
+        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[20342])">special://skin/extras/backgrounds/movies-mainmenu-bg.jpg</value> <!-- Movies -->
+        <value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31103])">special://skin/extras/backgrounds/live-tv-mainmenu-bg.jpg</value> <!-- Live TV -->
         <value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[20343])">special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value> <!-- TV shows -->
         <value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[20342])">special://skin/extras/backgrounds/movies-mainmenu-bg.jpg</value> <!-- Movies -->
         <value condition="String.IsEqual(Container(300).ListItem.Label,$LOCALIZE[31103])">special://skin/extras/backgrounds/live-tv-mainmenu-bg.jpg</value> <!-- Live TV -->
-	<value condition="Window.IsVisible(Custom_Hub_TVNetflix.xml)">special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value>
-	<value condition="Window.IsVisible(Custom_Hub_MovieNetflix.xml)">special://skin/extras/backgrounds/movies-mainmenu-bg.jpg</value>
-	<value condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Container(505).ListItem.Art(fanart))">$INFO[Container(505).ListItem.Art(fanart)]</value>
-	<value>special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value>
+        <value condition="Window.IsVisible(Custom_Hub_TVNetflix.xml)">special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value>
+        <value condition="Window.IsVisible(Custom_Hub_MovieNetflix.xml)">special://skin/extras/backgrounds/movies-mainmenu-bg.jpg</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Container(505).ListItem.Art(fanart))">$INFO[Container(505).ListItem.Art(fanart)]</value>
+        <value>special://skin/extras/backgrounds/tv-shows-mainmenu-bg.jpg</value>
 <!--	<value>$VAR[Global_Background_Image_Var]</value> -->
     </variable>
     <variable name="Image_OSD_Artwork">
@@ -339,6 +341,8 @@
         <value>special://skin/extras/icons/filter-off.png</value>
     </variable>
 
+<!-- genre image source  -->
+
     <variable name="Cat_GenreIcons">
         <value>$VAR[Cat_GenreIcons_Path]$INFO[ListItem.Label,,.jpg]</value>
         <value>$VAR[Cat_GenreIcons_Path]$INFO[ListItem.Label,,.png]</value>
@@ -350,13 +354,22 @@
         <value condition="System.HasAddon(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>
         <value condition="System.HasAddon(resource.images.moviegenreicons.grey)">resource://resource.images.moviegenreicons.grey/</value>
     </variable>
+
     <variable name="Image_GenreIcons">
         <value>$VAR[Image_GenreIcons_Path]$INFO[ListItem.Label,,.png]</value>
     </variable>
     <variable name="Image_GenreIcons_Path">
-        <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/</value>
-        <value condition="System.HasAddon(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>
+        <value condition="System.AddonIsEnabled(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>        
+        <value condition="System.AddonIsEnabled(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/</value>
     </variable>
+
+    <variable name="category_widget">
+        <value condition="String.Contains(ListItem.FolderPath,Genres)">$VAR[Cat_GenreIcons]</value>
+        <value condition="String.Contains(ListItem.FolderPath,Genres)">$VAR[Image_GenreIcons]</value> 
+    </variable>
+
+
+<!-- genre image source  -->
 
     <variable name="Image_FallbackIcon">
         <value condition="String.Contains(ListItem.Icon,Default)">$INFO[ListItem.Icon]</value>
@@ -435,11 +448,5 @@
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
-
-
-   <variable name="category_widget">
-  	<value condition="String.Contains(ListItem.FolderPath,Genres)">$VAR[Cat_GenreIcons]</value> 
-	<value>special://skin/extras/backgrounds/global_blue.jpg</value>
-  </variable>
 
 </includes>

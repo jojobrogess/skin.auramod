@@ -157,6 +157,6 @@ this font package, feel free to contact us at info@shyfonts.com.
 Thank you for downloading this font package and enjoy!
 
 STAR WARS, THE EMPIRE STRIKES BACK, RETURN OF THE JEDI, and all STAR
-WARS logos are TM and © LucasFilm, Ltd.
+WARS logos are TM and ï¿½ LucasFilm, Ltd.
 ------------------------------------------------------------------------
-©1999 ShyFonts Type Foundry -- http://www.shyfonts.com
+ï¿½1999 ShyFonts Type Foundry -- http://www.shyfonts.com

@@ -283,6 +283,23 @@
         </control>
     </include>
 
+    <include name="View_Library_Poster_Medium">
+        <control type="group">
+            <left>50</left>
+            <bottom>view_pad</bottom>
+            <top>420</top>
+            <visible>Container.Control.IsVisible(502) | Control.HasFocus(502)</visible>
+            <control type="group">
+                <width>widget_poster_width</width>
+                <height>widget_poster_height</height>            
+                <include content="Object_MediumPoster">
+                    <param name="discart" value="false" />
+                    <visible>Control.IsVisible(58)</visible>
+                </include>
+            </control>
+        </control>
+    </include>
+
     <include name="View_WatchedOverlay">
         <include condition="Skin.HasSetting(LightWatchedOverlay)">View_WatchedOverlay_White</include>
         <include condition="!Skin.HasSetting(LightWatchedOverlay)">View_WatchedOverlay_Black</include>

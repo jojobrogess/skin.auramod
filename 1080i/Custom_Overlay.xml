@@ -359,6 +359,8 @@
                 <visible>Window.IsVisible(DialogKaiToast.xml)</visible>
             </control>
 
+            
+
             <control type="label">
                 <width>780</width>
                 <height>21</height>

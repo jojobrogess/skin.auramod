@@ -1,4 +1,4 @@
-import xbmc
+import xbmcvfs
 import os
 import re
 import requests
@@ -20,7 +20,7 @@ if len(url) > 0:
     url = url[0]
 else:
     # fallback to default image
-    url = 'http://sirocco.accuweather.com/nx_mosaic_640x480_public/sir/inmasirFL_.gif'
+    url = 'http://sirocco.accuweather.com/nx_mosaic_640x480_public/sir/inmasirUS_.gif'
 
 image_response = requests.get(url, stream=True)
 if image_response.status_code == 200:

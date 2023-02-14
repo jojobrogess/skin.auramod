@@ -49,7 +49,6 @@
 		<height>1000</height>
 		<width>1100</width>
                 <left>800</left>
-		<movement>1</movement>
 		<scrolltime>500</scrolltime>
                 <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons) | Container.Content(artists) | Container.Content(videos) | $EXP[Exp_IsPluginAdvancedLauncher]</visible>
                 <include>View_NotTheseWindows</include>
@@ -340,9 +339,7 @@
           <right>-70</right>
           <left>-70</left>
           <height>470</height>
-          <focusposition>0</focusposition>
-          <movement>2</movement>
-          <viewtype label="$LOCALIZE[31467]">showcase panel</viewtype>
+          <viewtype label="$LOCALIZE[31467]">list</viewtype>
           <include>View_Movement_Vertical</include>
           <pagecontrol>60</pagecontrol>
           <onleft>509</onleft>
@@ -506,13 +503,11 @@
         <control type="wraplist" id="58">
         <onfocus>SetProperty(TMDbHelper.WidgetContainer,58,Home)</onfocus>
           <top>-10</top>
-          <height>920</height>
           <right>-70</right>
           <left>-70</left>
           <preloaditems>2</preloaditems>
           <height>poster_height</height>
           <focusposition>0</focusposition>
-          <movement>0</movement>
           <viewtype label="$LOCALIZE[31363]">icon</viewtype>
           <include>View_Movement_Vertical</include>
           <pagecontrol>60</pagecontrol>
@@ -750,7 +745,7 @@
             <param name="id" value="5057" />
 	</include>
         <left>-10</left>
-        <movement>2</movement>
+        <movement>1</movement>
         <width>1900</width>
         <height>1080</height>
         <orientation>vertical</orientation>
@@ -1764,6 +1759,7 @@
     <control type="group">
       <visible>Control.IsVisible(502)</visible>
       <visible>Container.Content(episodes) | Container.Content(seasons)</visible>
+      <include>View_Library_Poster_Medium</include>
       <control type="group">
         <include condition="Skin.HasSetting(DisableNetflixView)">View_Pad</include>
         <include condition="!Skin.HasSetting(DisableNetflixView)">Object_Episodes_Info</include>

@@ -13,7 +13,8 @@
    <include name="widget_logo_movie">
 	<control type="image">
 	<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$ESCINFO[ListItem.Label]&amp;type=clearlogo&amp;mediatype=movies</texture>
-	</control>
+	<value condition="String.Contains(ListItem.FolderPath,Genres)">$VAR[Image_GenreIcons]</value> 
+    </control>
    </include>
     <variable name="WidgetBannerVar">
         <value condition="!String.IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>

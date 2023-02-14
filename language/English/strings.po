@@ -1771,7 +1771,7 @@ msgstr ""
 
 #: /1080i/Includes_Widgets.xml
 msgctxt "#31373"
-msgid "See More"
+msgid "See M1re"
 msgstr ""
 
 #: /1080i/EventLog.xml

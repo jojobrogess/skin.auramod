@@ -13,7 +13,6 @@
         </control>
 
         <control type="group">
-            
             <centerleft>50%</centerleft>
             <centertop>50%</centertop>
             <width>1880</width>
@@ -73,7 +72,7 @@
                 <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 <visible>String.IsEmpty(Window.Property(SetWidgets))</visible>
             </control>
--->
+        -->
             <!-- Shortcuts List -->
             <control type="list" id="211">
                 <description>Rules List Control</description>
@@ -210,21 +209,21 @@
             </control>
 
 
-                <control type="button" id="308" description="Reset">
-		    <onup>304</onup>
-                    <onright>9100</onright>
-                    <bottom>15</bottom>
-                    <left>15</left>
-                    <width>580</width>
-                    <height>66</height>
-                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
-                    <align>center</align>
-                    <include>Dialog_Standard_Right_Buttons</include>
-                    <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                    <visible>!String.EndsWith(Window.Property(groupname),.1) + !String.Contains(Window.Property(groupname),netflixhubmovies) | !String.Contains(Window.Property(groupname),netflixhubtv) + !String.IsEqual(Window.Property(groupname),pvrspot)</visible>
-                </control>
+            <control type="button" id="308" description="Reset">
+               <onup>304</onup>
+               <onright>9100</onright>
+               <bottom>15</bottom>
+               <left>15</left>
+               <width>580</width>
+               <height>66</height>
+               <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+               <align>center</align>
+               <include>Dialog_Standard_Right_Buttons</include>
+               <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+               <visible>!String.EndsWith(Window.Property(groupname),.1) + !String.Contains(Window.Property(groupname),netflixhubmovies) | !String.Contains(Window.Property(groupname),netflixhubtv) + !String.IsEqual(Window.Property(groupname),pvrspot)</visible>
+           </control>
 
-            <!-- Shortcuts Buttons -->
+               <!-- Shortcuts Buttons -->
             <control type="grouplist" id="9100">
                 <visible>String.IsEmpty(Window.Property(SetWidgets)) + !ControlGroup(9300).HasFocus() + !ControlGroup(9400).HasFocus()</visible>
                 <onleft>304</onleft>
@@ -235,7 +234,7 @@
                 <width>1250</width>
                 <height>695</height>
                 <orientation>vertical</orientation>
-               <itemgap>3</itemgap>
+                <itemgap>3</itemgap>
 
                 <control type="togglebutton" id="313" description="Enable/Disable">
                     <width>100%</width>
@@ -248,8 +247,8 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
-                  <control type="button" id="4001" description="Choose Widget">
-                   <width>100%</width>
+                <control type="button" id="4001" description="Choose Widget">
+                    <width>100%</width>
                     <height>66</height>
                     <align>left</align>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -337,12 +336,12 @@
                     <include>Dialog_Standard_Right_Buttons</include>
                     <visible>!String.Contains(Window.Property(groupname),searchmenus) + !String.EndsWith(Window.Property(groupname),.1) + !String.Contains(Window.Property(groupname),netflixhubmovies) + !String.Contains(Window.Property(groupname),netflixhubtv) + !String.IsEqual(Window.Property(groupname),pvrspot)</visible>
                 </control>
-		<control type="label" id="9991">
-		   <height>70</height>
-		   <label>$LOCALIZE[31247]</label> <!-- Widgets -->
-		   <font>font_heading_small</font>
-                   <textcolor>dialog_fg_70</textcolor>
-		</control>
+                <control type="label" id="9991">
+                    <height>70</height>
+                    <label>$LOCALIZE[31247]</label> <!-- Widgets -->
+                    <font>font_heading_small</font>
+                    <textcolor>dialog_fg_70</textcolor>
+                </control>
 
 
                 <control type="button" id="405" description="Set Submenu">
@@ -374,12 +373,12 @@
                     <height>66</height>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
-<!--
-                    <onclick>SetProperty(SetWidgets,1)</onclick>
-                    <onclick>SetFocus(9300)</onclick>
-                    <onclick>SetFocus(9401)</onclick>
--->
-		    <enable>String.IsEqual(Container(211).ListItem.Property(widgetType),Default) | String.IsEmpty(Container(211).ListItem.Property(widgetType))</enable>
+        <!--
+                        <onclick>SetProperty(SetWidgets,1)</onclick>
+                        <onclick>SetFocus(9300)</onclick>
+                        <onclick>SetFocus(9401)</onclick>
+                    -->
+                    <enable>String.IsEqual(Container(211).ListItem.Property(widgetType),Default) | String.IsEmpty(Container(211).ListItem.Property(widgetType))</enable>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                     <include>Dialog_Standard_Right_Buttons</include>
@@ -388,7 +387,7 @@
 
 
                 <control type="button" id="9901" description="Widget Submenu Aspect">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31763]</label> <!-- Widget Style -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -399,7 +398,7 @@
                     <visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenus) | String.IsEqual(Window.Property(groupname),aurahubtv) | String.IsEqual(Window.Property(groupname),aurahubmovies) | String.IsEqual(Window.Property(groupname),hubtvnetworks) | [Skin.HasSetting(EnableAuraMovie1) + String.Contains(Window.Property(groupname),x1101)] | [Skin.HasSetting(EnableAuraTV1) + String.Contains(Window.Property(groupname),x1103)] | [Skin.HasSetting(EnableAuraMy1) + String.Contains(Window.Property(groupname),x1105)] | [Skin.HasSetting(EnableAuraMy2) + String.Contains(Window.Property(groupname),x1106)] | [Skin.HasSetting(EnableAuraMy3) + String.Contains(Window.Property(groupname),x1107)]</visible>
                 </control>
                 <control type="button" id="9905" description="Widget Submenu Aspect">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31763]</label> <!-- Widget Style -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -410,19 +409,19 @@
                     <visible>String.Contains(Window.Property(groupname),x1102) | String.Contains(Window.Property(groupname),x1108) | String.Contains(Window.Property(groupname),x1104) | String.Contains(Window.Property(groupname),x1109) |  String.Contains(Window.Property(groupname),x1110) | String.Contains(Window.Property(groupname),x1111) | String.Contains(Window.Property(groupname),x1112) | String.Contains(Window.Property(groupname),x1113) | [!Skin.HasSetting(EnableAuraMovie1) + String.Contains(Window.Property(groupname),x1101)] | [!Skin.HasSetting(EnableAuraTV1) + String.Contains(Window.Property(groupname),x1103)] | [!Skin.HasSetting(EnableAuraMy1) + String.Contains(Window.Property(groupname),x1105)] | [!Skin.HasSetting(EnableAuraMy2) + String.Contains(Window.Property(groupname),x1106)] | [!Skin.HasSetting(EnableAuraMy3) + String.Contains(Window.Property(groupname),x1107)] | String.Contains(Window.Property(groupname),netflixhubmovies) | String.Contains(Window.Property(groupname),netflixhubtv)</visible>
                 </control>
                 <control type="button" id="9902" description="Content Type / Widget Target">
-                   <width>100%</width>
-                    <height>66</height>
-                    <label>$LOCALIZE[31764]</label> <!-- Content Type -->
-                    <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
-                    <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
-                    <align>left</align>
-                    <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
-                    <include>Dialog_Standard_Right_Buttons</include>
+                     <width>100%</width>
+                     <height>66</height>
+                     <label>$LOCALIZE[31764]</label> <!-- Content Type -->
+                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                     <label2>$INFO[Container(211).ListItem.Property(widgetTarget)]</label2>
+                     <align>left</align>
+                     <visible>String.EndsWith(Window.Property(groupname),.1)</visible>
+                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
 
                 <control type="button" id="9903" description="Sort by">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31765]</label> <!-- Sort By -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -434,7 +433,7 @@
                 </control>
 
                 <control type="button" id="9904" description="Sort direction">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31766]</label> <!-- Sort Direction -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
@@ -444,7 +443,7 @@
                     <visible>String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),searchmenus) | String.IsEqual(Window.Property(groupname),aurahubtv) | String.IsEqual(Window.Property(groupname),aurahubmovies) | String.Contains(Window.Property(groupname),x110) | String.Contains(Window.Property(groupname),netflixhubmovies) | String.Contains(Window.Property(groupname),netflixhubtv) | String.IsEqual(Window.Property(groupname),hubtvnetworks)</visible>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
-<!--
+    <!--
                 <control type="radiobutton" id="99139" description="Enable Netflix Style">
                     <width>100%</width>
                     <label>$LOCALIZE[31767]</label>
@@ -461,7 +460,7 @@
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                 </control>
--->
+            -->
                 <control type="radiobutton" id="9913" description="Widget Spotlight">
                     <width>100%</width>
                     <label>$LOCALIZE[31768]</label> <!-- Enable Spotlight -->
@@ -479,7 +478,7 @@
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                 </control>
                 <control type="button" id="9906" description="Choose Spotlight">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label>$LOCALIZE[31769]</label> <!-- Choose Spotlight -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + String.IsEqual(Container(211).ListItem.Property(widgetspotlight),true)</visible>
@@ -488,7 +487,7 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
-<!--
+    <!--
                 <control type="radiobutton" id="9907" description="List as Widget">
                     <width>100%</width>
                     <label>$LOCALIZE[31793]</label>
@@ -515,7 +514,7 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
--->
+            -->
                 <control type="radiobutton" id="9909" description="Auto Scroll to Hub">
                     <width>100%</width>
                     <label>$LOCALIZE[31770]</label> <!-- Enable Autoscroll to Hub -->
@@ -533,7 +532,7 @@
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                 </control>
                 <control type="button" id="9910" description="Choose Scroll Hub">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label> - $LOCALIZE[31771]</label> <!-- Choose Autoscroll Hub -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + String.IsEqual(Container(211).ListItem.Property(widgethubscroll),true)</visible>
@@ -542,7 +541,7 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
-<!--
+    <!--
                 <control type="radiobutton" id="9919" description="My List Widget">
                     <width>100%</width>
                     <label>$LOCALIZE[31793]</label>
@@ -591,7 +590,7 @@
                     <onclick condition="String.IsEqual(Skin.String(menuonleftposition),true)">Skin.SetString(menuonleftposition,Last Widget)</onclick>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
--->
+            -->
                 <control type="radiobutton" id="9919" description="My List Widget">
                     <width>100%</width>
                     <label>$LOCALIZE[31772]</label> <!-- Enable Menu on Left -->
@@ -609,7 +608,7 @@
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
                 </control>
                 <control type="button" id="99101" description="Choose List">
-                   <width>100%</width>
+                    <width>100%</width>
                     <height>66</height>
                     <label> - $LOCALIZE[31773]</label> <!-- Choose Menu -->
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + String.IsEqual(Container(211).ListItem.Property(menuonleft),true) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
@@ -618,7 +617,6 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
-
 
 
                 <control type="radiobutton" id="9911" description="Widget Control">
@@ -650,7 +648,8 @@
                     <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetInfoSlide),true)">SetProperty(customValue,false)</onclick>
                     <onclick>SendClick(404)</onclick>
                     <align>left</align>
-		    <visible>String.IsEqual(Container(211).ListItem.Property(widgetAspect),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetAspect),Landscape)</visible>
+                    <visible>Skin.HasSetting(DisableNetflixHomeDefault)</visible>
+                    <visible>String.IsEqual(Container(211).ListItem.Property(widgetAspect),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetAspect),Landscape)</visible>
                     <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),pvrspot)</visible>
                 </control>
                 <control type="radiobutton" id="99105" description="Widget Landscapewide BG">
@@ -702,15 +701,15 @@
                     <onclick>SendClick(404)</onclick>
                     <align>left</align>
                     <visible>String.IsEqual(Container(211).ListItem.Property(widgetAspect),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetAspect),Landscape) | String.IsEqual(Container(211).ListItem.Property(widgetAspect),LandscapePanel)</visible>
-		    <visible>String.IsEqual(Container(211).ListItem.Property(widgetShowcase),true)</visible>
+                    <visible>String.IsEqual(Container(211).ListItem.Property(widgetShowcase),true)</visible>
                 </control>
                 <control type="label" id="9992">
-                   <height>70</height>
-                   <label>$LOCALIZE[31797]</label> <!-- Global -->
-                   <font>font_heading_small</font>
-                   <textcolor>dialog_fg_70</textcolor>
+                    <height>70</height>
+                    <label>$LOCALIZE[31797]</label> <!-- Global -->
+                    <font>font_heading_small</font>
+                    <textcolor>dialog_fg_70</textcolor>
                 </control>
-<!--
+    <!--
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>
@@ -721,22 +720,21 @@
                     <visible>!String.EndsWith(Window.Property(groupname),.1) + !String.Contains(Window.Property(groupname),netflixhubmovies) | !String.Contains(Window.Property(groupname),netflixhubtv) + !String.IsEqual(Window.Property(groupname),pvrspot)</visible>
                 </control>
 
--->
+            -->
                 <control type="button" id="9900" description="Save Changes">
-		    <onleft>SetFocus(308)</onleft>
-                    <include>Defs_SkinShortcuts_SetStrings_OnClick</include>
-                    <width>100%</width>
-                    <label>$LOCALIZE[31019]</label>
-                    <height>66</height>
-                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
-                    <align>left</align>
-                    <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
-                    <include>Dialog_Standard_Right_Buttons</include>
-                </control>
-
+                   <onleft>SetFocus(308)</onleft>
+                   <include>Defs_SkinShortcuts_SetStrings_OnClick</include>
+                   <width>100%</width>
+                   <label>$LOCALIZE[31019]</label>
+                   <height>66</height>
+                   <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                   <align>left</align>
+                   <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+                   <include>Dialog_Standard_Right_Buttons</include>
+               </control>
             </control>
 
-            <!-- Widgets -->
+           <!-- Widgets -->
             <control type="grouplist" id="9300">
                 <visible>!String.IsEmpty(Window.Property(SetWidgets)) | ControlGroup(9300).HasFocus() | ControlGroup(9400).HasFocus()</visible>
                 <onleft>9400</onleft>
@@ -889,12 +887,12 @@
                     <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31263]) | String.IsEmpty(Window.Property(WidgetAspect_Item))">SetProperty(customValue,$LOCALIZE[20021])</onfocus>
                     <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[20021])">SetProperty(customValue,$LOCALIZE[31038])</onfocus>
                     <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31038])">SetProperty(customValue,$LOCALIZE[31411])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31411])">SetProperty(customValue,$LOCALIZE[31414])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31414])">SetProperty(customValue,$LOCALIZE[31418])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31418])">SetProperty(customValue,$LOCALIZE[31412])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31412])">SetProperty(customValue,$LOCALIZE[31430])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31430])">SetProperty(customValue,$LOCALIZE[31443])</onfocus>
-	            <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31443])">SetProperty(customValue,$LOCALIZE[31263])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31411])">SetProperty(customValue,$LOCALIZE[31414])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31414])">SetProperty(customValue,$LOCALIZE[31418])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31418])">SetProperty(customValue,$LOCALIZE[31412])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31412])">SetProperty(customValue,$LOCALIZE[31430])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31430])">SetProperty(customValue,$LOCALIZE[31443])</onfocus>
+                    <onfocus condition="String.IsEqual(Window.Property(WidgetAspect_Item),$LOCALIZE[31443])">SetProperty(customValue,$LOCALIZE[31263])</onfocus>
                     <onclick>SendClick(404)</onclick>
                     <onclick>AlarmClock(Setit,SetFocus(9300),00:00,silent)</onclick>
                     <onclick>AlarmClock(Setitback,SetFocus(9403),00:00,silent)</onclick>
@@ -928,9 +926,7 @@
                     <onback condition="!String.IsEmpty(Window.Property(SetWidgets))">AlarmClock(reopen,RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu),00:00,silent)</onback>
                 </control>
             </control>
-
         </control>
-
         <control type="button" id="404"><visible allowhiddenfocus="true">false</visible><width>1</width><height>1</height></control>
     </controls>
 </window>
