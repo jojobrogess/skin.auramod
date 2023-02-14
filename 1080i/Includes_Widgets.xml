@@ -215,6 +215,10 @@
         <height>50</height>
         <visible>!Skin.HasSetting(SubmenuLabel)</visible>
       </control>
+      <control type="group" id="3321" description="Spacer">
+        <height>855</height>
+        <visible>$EXP[noSubMenu] + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
+      </control>
       <control type="group" id="333" description="Spacer">
         <height>110</height>
         <visible>Skin.HasSetting(DisableMenuHor)</visible>
