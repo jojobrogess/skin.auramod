@@ -3591,6 +3591,49 @@
       </control>
     </definition>
   </include>
+  <include name="Object_MediumPoster">
+    <param name="container" default="" />
+    <param name="visible" default="!Container.IsUpdating" />
+    <param name="variable" default="$VAR[Image_Poster]" />
+    <param name="height" default="550" />
+    <param name="width" default="350" />
+    <param name="discart" default="false" />
+    <param name="aspect" default="keep" />
+    <definition>
+      <control type="group">
+        <left>0</left>
+        <top>0</top>
+        <width>400</width>
+        <height>$PARAM[height]</height>
+        <visible>$PARAM[visible]</visible>
+        <control type="group">
+          <visible>!Window.IsVisible(MyPics.xml)</visible>
+          <control type="group">
+            <control type="image">
+              <aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
+              <texture background="true" fallback="DefaultAddonImages.png" diffuse="diffuse/bigposter.png">$PARAM[variable]</texture>
+              <visible>[!$PARAM[container]ListItem.IsParentFolder + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(season.poster))]]</visible>
+            </control>
+            <control type="group">
+              <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,DefaultIcon)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(season.poster))]]</visible>
+              <control type="image">
+                <aspectratio aligny="center" scalediffuse="false">$PARAM[aspect]</aspectratio>
+                <texture background="true" fallback="DefaultAddonImages.png" diffuse="diffuse/bigposter.png">$PARAM[variable]</texture>
+              </control>
+            </control>
+          </control>
+          <control type="group">
+            <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,DefaultIcon)</visible>
+            <control type="image">
+              <aspectratio aligny="center" scalediffuse="false">center</aspectratio>
+              <texture background="true" colordiffuse="PosterFront" fallback="DefaultAddonNone.png" diffuse="diffuse/bigposter.png">$VAR[serenicons]</texture>
+              <visible>String.Contains(ListItem.Path,plugin://plugin.video.seren)</visible>
+            </control>
+          </control>
+        </control>
+      </control>
+    </definition>
+  </include>
   <include name="Object_Flags">
     <param name="container" default="" />
     <param name="source" default="ListItem." />
