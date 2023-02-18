@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <include name="View_ViewIDs"><views>50,500,501,503,51,52,53,512,55,56,509,54,57,58,59,502,504,505,506,507,510,511</views></include>
-
+    <include name="View_ViewIDs">
+        <views>50,500,501,503,51,52,53,512,55,56,509,54,57,58,59,502,504,505,506,507,510,511</views>
+    </include>
     <include name="View_Group">
         <top>view_pad</top>
     </include>
@@ -12,22 +13,21 @@
         <right>view_pad</right>
         <top>view_pad</top>
     </include>
+
     <include name="View_Pad_Netflix">
-   	<left>40</left>
+        <left>40</left>
         <top>-20</top>
     </include>
-
     <include name="View_NotTheseWindows">
         <visible>![Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPlaylist.xml)]</visible>
     </include>
-
     <include name="View_Library">
         <control type="group">
             <visible allowhiddenfocus="true">!$EXP[Exp_HideFurniture]</visible>
             <include>Animation_FadeInOut</include>
-	   <control type="group">
-	    <include>Global_Background</include>
-	    <visible>!Skin.HasSetting(DisableNetflixView) + [!Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRGuide.xml) + !Control.HasFocus(505) + !Control.HasFocus(506) + !Control.HasFocus(5056) + !Control.HasFocus(5055) + ![Control.IsVisible(55) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)] + ![Control.IsVisible(56) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)] + ![Control.IsVisible(509) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)]]</visible>
+	    <control type="group">
+    	    <include>Global_Background</include>
+    	    <visible>!Skin.HasSetting(DisableNetflixView) + [!Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRGuide.xml) + !Control.HasFocus(505) + !Control.HasFocus(506) + !Control.HasFocus(5056) + !Control.HasFocus(5055) + ![Control.IsVisible(55) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)] + ![Control.IsVisible(56) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)] + ![Control.IsVisible(509) + !Skin.HasSetting(DisableNetflixShowcaseOverlay)]]</visible>
 	    </control>
             <control type="group">
                 <include>View_Group</include>
@@ -85,7 +85,6 @@
                     <include>Animation_FadeOut</include>
                 </control>
             </control>
-
         </control>
     </include>
 
@@ -648,7 +647,6 @@
         <onright condition="Control.IsVisible(60)">60</onright>
         <onright condition="!Control.IsVisible(60)">300</onright>
         <onleft>300</onleft>
-
     </include>
 
     <include name="View_Movement_Vertical">

@@ -31,8 +31,8 @@
       <visible allowhiddenfocus="true">!$EXP[Exp_HideFurniture]</visible>
       <control type="group">
       	<include>spotlight_animations</include>
+
         <include>Defs_InfoDialog_Visible</include>
-        
         <control type="group">
           <left>-10</left>
           <right>-400</right>
@@ -212,6 +212,10 @@
       <control type="group" id="332" description="Spacer">
         <height>50</height>
         <visible>!Skin.HasSetting(SubmenuLabel)</visible>
+      </control>
+      <control type="group" id="3321" description="Spacer">
+        <height>855</height>
+        <visible>$EXP[noSubMenu] + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="group" id="333" description="Spacer">
         <height>110</height>
@@ -1814,6 +1818,7 @@
     </definition>
   </include>
 
+<!-- i think this is for TVShows ???  -->
   <include name="Widget_Items_Poster">
     <param name="poster" default="false" />
     <definition>
@@ -1881,6 +1886,7 @@
     <param name="landscapenetflix" default="false" />
     <param name="landscapepanel" default="false" />
     <param name="landscapedetails" default="false" />
+    <param name="squarelabel" default="false" />
     <param name="squarelabel" default="false" />
     <param name="category" default="false" />
     <param name="submenuwidget" default="false" />

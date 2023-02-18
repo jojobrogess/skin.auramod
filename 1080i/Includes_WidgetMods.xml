@@ -36,7 +36,13 @@
         <centertop>40%</centertop>
         <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">keep</aspectratio>
-        <visible>String.Contains(ListItem.FolderPath,Genres)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+      </control>
+      <control type="image">
+        <height>90%</height>>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="group">
         <visible>String.IsEqual(ListItem.DBType,episode) + [!String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo))] + !Skin.HasSetting(WidgetLabels)</visible>
@@ -58,9 +64,7 @@
         </control>
       </control>
       <!-- Clearlogo -->
-      <control type="group">
-        <!-- Add Clearlogo to landscape Image -->
-      </control>
+      <!-- Add Clearlogo to landscape Image -->
       <control type="image">
         <bottom>30</bottom>
         <top>170</top>
@@ -211,7 +215,7 @@
       <control type="image">
         <texture fallback="DefaultFanartFallback.jpg" diffuse="diffuse/widgetlandscape.png" background="true">$VAR[Image_Fanart]</texture>
         <aspectratio scalediffuse="false">scale</aspectratio>
-        <visible>!String.Contains(ListItem.Path,plugin://plugin.video.youtube)</visible>
+        <visible>!String.Contains(ListItem.Path,plugin://plugin.video.youtube) | !String.Contains(ListItem.FolderPath,Genres)</visible>
         <visible>!String.IsEmpty(ListItem.Art(landscape)) | [!String.IsEmpty(ListItem.Art(fanart)) + !String.Contains(ListItem.Art(fanart),plugin.video.themoviedb.helper/fanart.jpg)] | !String.IsEmpty(ListItem.Art(thumb))</visible>
       </control>
       <control type="image">
@@ -250,10 +254,18 @@
           <centertop>38%</centertop>
           <texture colordiffuse="$PARAM[color]" diffuse="diffuse/widgetlandscape.png" background="true" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
           <aspectratio scalediffuse="false">keep</aspectratio>
+          <visible>!String.Contains(ListItem.Path,plugin://plugin.video.youtube)</visible>
+          <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        </control>
+        <control type="image">
+          <height>90%</height>
+          <bottom>10</bottom>
+          <texture colordiffuse="$PARAM[color]" diffuse="diffuse/widgetlandscape.png" background="true" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+          <aspectratio scalediffuse="false">keep</aspectratio>
+          <visible>!String.Contains(ListItem.Path,plugin://plugin.video.youtube)</visible>
+          <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
         </control>
 
-        <!-- NEED to section off label to get genre to work correctly.  -->        
-        <!-- TextBar Landscape Small Widget & Panel, Squarelabel, Posterdetails Textbar -->
         <control type="label"> 
           <top>160</top>
           <align>center</align>
@@ -264,6 +276,20 @@
           <label>$VAR[Label_Widget]</label>
           <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
         </control> 
+
+        <control type="label"> 
+          <top>160</top>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font_tiny</font>
+          <textcolor>main_fg_70</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$VAR[Label_Widget]</label>
+          <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        </control> 
+
+    
+        <!-- TextBar Landscape Small Widget & Panel, Squarelabel, Posterdetails Textbar -->
         <!-- For LandscapeSmall Textbar -->
         <control type="label"> 
           <top>190</top>
@@ -356,8 +382,14 @@
       </control>
       <control type="image">
         <centertop>42%</centertop>
-        <texture colordiffuse="$PARAM[color]" diffuse="diffuse/widgetlandscape.png" background="true">$VAR[Image_GenreIcons]</texture>
+        <texture colordiffuse="$PARAM[color]" diffuse="diffuse/widgetlandscape.png" background="true" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+      </control>
+      <control type="image">
+        <texture colordiffuse="$PARAM[color]" diffuse="diffuse/widgetlandscape.png" background="true" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="label">
         <top>300</top>
@@ -370,7 +402,7 @@
         <textcolor>main_fg_70</textcolor>
         <shadowcolor>black</shadowcolor>
         <label>$VAR[Label_Widget]</label>
-        <visible>String.Contains(ListItem.FolderPath,Genres)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="group">
         <visible>Skin.HasSetting(WidgetLabels) + String.IsEqual(ListItem.DBType,episode)</visible>
@@ -1018,7 +1050,8 @@
       <control type="image">
         <width>100%</width>
         <height>70%</height>
-        <texture background="true" colordiffuse="4DFFFFFF" border="10" flipy="true">diffuse/halfbox.png</texture><visible>!String.Contains(ListItem.FolderPath,Genres)</visible>
+        <texture background="true" colordiffuse="PosterBack" border="10" flipy="true">diffuse/halfbox.png</texture>
+        <visible>!String.Contains(ListItem.FolderPath,Genres)</visible>
       </control>
       <control type="image">
         <height>70%</height>
@@ -1026,13 +1059,35 @@
         <aspectratio scalediffuse="false">keep</aspectratio>
       </control>
       <control type="image">
+        <top>10</top>
+        <height>75%</height>
         <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
-        <aspectratio scalediffuse="false">center</aspectratio>
-        <visible>String.Contains(ListItem.FolderPath,Genres)</visible>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout) + !Skin.HasSetting(WidgetLabels)</visible>
+      </control>
+      <control type="image">
+        <top>30</top>
+        <height>75%</height>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout) + Skin.HasSetting(WidgetLabels)</visible>
+      </control>
+      <control type="image">
+        <top>10</top>
+        <height>85%</height>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)+ !Skin.HasSetting(WidgetLabels)</visible>
+      </control>
+      <control type="image">
+        <top>30</top>
+        <height>75%</height>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetlandscape.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout) + Skin.HasSetting(WidgetLabels)</visible>
       </control>
       <control type="group">
         <height>70</height>
-        <bottom>0</bottom>
         <visible>![!Skin.HasSetting(DisableFakeLandscapeArt) + !String.IsEmpty(ListItem.Art(clearlogo)) + !String.IsEmpty(ListItem.Art(fanart)) + [String.IsEqual(ListItem.Label,ListItem.TvShowTitle) | String.IsEmpty(ListItem.TvShowTitle) | Skin.HasSetting(PreferFanartHome)]]</visible>
         <control type="image">
           <texture background="true" colordiffuse="FF000000" border="10" flipy="true">diffuse/halfbox.png</texture>
@@ -1091,12 +1146,12 @@
           <visible>Integer.IsEqual(ListItem.Progress,0)</visible>
         </control>
         <control type="label">
-          <bottom>20</bottom>
+          <top>295</top>
           <align>center</align>
           <textcolor>main_fg_70</textcolor>
           <shadowcolor>black</shadowcolor>
           <label>$INFO[Container(5055).ListItem.Label]</label>
-          <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+          <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout) + !Skin.HasSetting(WidgetLabels)</visible>
         </control>
       </control>
       <include>seemore</include>
@@ -1119,12 +1174,12 @@
         <centertop>40%</centertop>
         <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetposter.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">keep</aspectratio>
-        <visible>String.IsEmpty(ListItem.Property(clearart)) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="image">
         <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/widgetposter.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">keep</aspectratio>
-        <visible>String.IsEmpty(ListItem.Property(clearart)) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="label">
         <centerbottom>10%</centerbottom>
@@ -1159,7 +1214,7 @@
   <!-- END Netflix Showcase ClearArt Logo Widget -->
 
 
-  <!-- Start Widget Submenu Widget -->
+  <!-- Start Widget Submenu Widget This is using Widget_Items_Poster -->
   <include name="Widget_Items_SubmenuWidget">
     <control type="group">
       <control type="image">
@@ -1185,14 +1240,14 @@
       </control>
       <control type="image">
         <centertop>40%</centertop>
-        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/submenu.png">$VAR[Image_GenreIcons]</texture>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/submenu.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">center</aspectratio>
-        <visible>String.IsEmpty(ListItem.Property(background)) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="image">
-        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/submenu.png">$VAR[Image_GenreIcons]</texture>
+        <texture colordiffuse="$PARAM[color]" background="true" diffuse="diffuse/submenu.png" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
         <aspectratio scalediffuse="false">center</aspectratio>
-        <visible>String.IsEmpty(ListItem.Property(background)) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        <visible>String.Contains(ListItem.FolderPath,Genres) + !Skin.HasSetting(DisableAuraHomeLayout)</visible>
       </control>
       <control type="label">
         <top>150</top>
@@ -1214,13 +1269,20 @@
         <label>$INFO[ListItem.Label]</label>
         <visible>String.Contains(ListItem.Icon,none.png)</visible>
       </control>
+      
+
+      <!-- WORKING code just need to fix random image popping up
       <control type="image">
-        <bordersize>5</bordersize>
-        <centertop>40%</centertop>
+        <texture background="true" fallback="DefaultFanartFallback.jpg" diffuse="diffuse/widgetlandscape.png">$VAR[Image_Fanart]</texture>
         <aspectratio scalediffuse="false">scale</aspectratio>
-        <texture background="true" diffuse="diffuse/submenubig.png">$INFO[ListItem.Icon]</texture>
-        <visible>!String.Contains(ListItem.Icon,none.png)</visible>
-      </control>        
+        <visible>!String.IsEmpty(ListItem.Art(landscape)) | [!String.IsEmpty(ListItem.Art(fanart)) + !String.Contains(ListItem.Art(fanart),plugin.video.themoviedb.helper/fanart.jpg)] | !String.IsEmpty(ListItem.Art(thumb))</visible>
+      </control>
+      <control type="image">
+        <texture background="true" fallback="DefaultFanartFallback.jpg" diffuse="diffuse/widgetlandscape.png">$INFO[ListItem.Art(poster)]</texture>
+        <centerleft>50%</centerleft>
+        <aspectratio scalediffuse="false">keep</aspectratio>
+        <visible>String.IsEmpty(ListItem.Art(landscape)) + [String.IsEmpty(ListItem.Art(fanart)) | String.Contains(ListItem.Art(fanart),plugin.video.themoviedb.helper/fanart.jpg)] + String.IsEmpty(ListItem.Art(thumb))</visible>
+      </control>        -->
     </control>
   </include>
   <!-- Stop Widget Submenu Widget -->
