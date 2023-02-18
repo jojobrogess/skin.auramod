@@ -306,7 +306,6 @@
                             <visible>Integer.IsEqual(Window.Property(CurrentFocus),9001)</visible>
                             <include>Defs_Settings_Button</include>
                             <label> - $LOCALIZE[31506]</label> <!-- Open Category Widget on Focus -->
-                            <visible>Skin.HasSetting(DisableNetflixHome) + !Skin.HasSetting(DisableNetflixCatWidget) + [!Skin.HasSetting(DisableMenuVertIcon) | Skin.HasSetting(DisableMenuVertLabel)]</visible>
                             <enable>Skin.HasSetting(DisableNetflixHome) + !Skin.HasSetting(DisableNetflixCatWidget) + [!Skin.HasSetting(DisableMenuVertIcon) | Skin.HasSetting(DisableMenuVertLabel)]</enable>
                             <selected>Skin.HasSetting(EnableCatonFocus)</selected>
                             <onclick>Skin.ToggleSetting(EnableCatonFocus)</onclick>
