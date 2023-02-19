@@ -634,7 +634,7 @@
                     <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetControl),true)">SetProperty(customValue,false)</onclick>
                     <onclick>SendClick(404)</onclick>
                     <align>left</align>
-                    <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + !String.IsEqual(Window.Property(groupname),searchmenus) + !String.IsEqual(Window.Property(groupname),pvrspot)  + !String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + !String.IsEqual(Window.Property(groupname),searchmenus) + !String.IsEqual(Window.Property(groupname),pvrspot) + !String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
 
                 <control type="radiobutton" id="99131" description="Widget Info Slide">
