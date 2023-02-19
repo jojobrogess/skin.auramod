@@ -22,7 +22,7 @@
             <label>$INFO[Container($PARAM[id]).ListItemAbsolute($PARAM[pos]).Label]</label>
             <visible>!String.IsEqual(Container($PARAM[id]).ListItemAbsolute($PARAM[pos]).Label,Container($PARAM[id]).ListItem.Label)</visible>
         </control>
-        <control type="togglebutton"  id="$PARAM[posid]">
+        <control type="togglebutton" id="$PARAM[posid]">
             <width>auto</width>
             <align>left</align>
             <height>view_pad</height>

@@ -823,7 +823,7 @@
         </control>
 	<control type="group" id="5411">
           <height>270</height>
-          <animation effect="slide"  end="0,-450" time="500" condition="Control.HasFocus(54)">Conditional</animation>
+          <animation effect="slide" end="0,-450" time="500" condition="Control.HasFocus(54)">Conditional</animation>
           <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
             <param name="id" value="540" />
             <param name="aspect" value="landscapenetflix" />
@@ -837,7 +837,7 @@
         </control>
         <control type="group" id="5412">
           <height>270</height>
-          <animation effect="slide"  end="0,-450" time="500" condition="Control.HasFocus(54)">Conditional</animation>
+          <animation effect="slide" end="0,-450" time="500" condition="Control.HasFocus(54)">Conditional</animation>
           <include condition="true" content="netflix_customhub_item" name="netflix_customhub_item">
             <param name="id" value="542" />
             <param name="aspect" value="landscapenetflix" />
@@ -1161,8 +1161,8 @@
              <effect type="zoom" start="80" end="100" center="auto" tween="Cubic" easing="inout" time="500"/>
      </animation>
      <animation type="WindowClose">
-             <effect type="slide" start="0" end="0,1000" center="auto" delay="200"  tween="Cubic" easing="inout" time="500"/>
-             <effect type="zoom" start="100" end="80" center="auto" delay="200"  tween="Cubic" easing="inout" time="200"/>
+             <effect type="slide" start="0" end="0,1000" center="auto" delay="200" tween="Cubic" easing="inout" time="500"/>
+             <effect type="zoom" start="100" end="80" center="auto" delay="200" tween="Cubic" easing="inout" time="200"/>
      </animation>
     <control type="group">
     <include>Animation_FadeIn_Slide</include>

@@ -2013,7 +2013,7 @@
           <right>100</right>
           <width>$PARAM[width]</width>
           <height>184</height>
-          <animation effect="slide" end="80,0" time="0" condition="[[String.IsEmpty(ListItem.Studio) + !String.Contains(ListItem.Studio,/)] | Control.IsVisible(1505)  | Control.IsVisible(1506)]">Conditional</animation>
+          <animation effect="slide" end="80,0" time="0" condition="[[String.IsEmpty(ListItem.Studio) + !String.Contains(ListItem.Studio,/)] | Control.IsVisible(1505) | Control.IsVisible(1506)]">Conditional</animation>
           <animation effect="slide" end="-450,-20" time="0" condition="Control.IsVisible(1505)">Conditional</animation>
           <animation effect="slide" end="-450,-20" time="0" condition="Control.IsVisible(1506)">Conditional</animation>
           <include content="Object_Ratings_Container" condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(Home.xml) | Window.IsVisible(script-globalsearch.xml)">
