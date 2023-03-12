@@ -16,9 +16,9 @@
         </control>
         <control type="list" id="300">
             <onup condition="Skin.HasSetting(HideSubmenuWidget)">302</onup>
-            <ondown condition="Control.HasFocus(300) + Skin.HasSetting(SettingsNew)  + Skin.HasSetting(DisableMenuHor) + [String.IsEqual(Container(300).ListItem.Property(widget),Settings) | String.IsEqual(Container(300).ListItem.Property(widgetType),Settings Widget)]">9967</ondown>
-            <ondown condition="Control.HasFocus(300) + !Skin.HasSetting(SettingsNew)  + Skin.HasSetting(DisableMenuHor) + [String.IsEqual(Container(300).ListItem.Property(widget),Settings) | String.IsEqual(Container(300).ListItem.Property(widgetType),Settings Widget)]">9000</ondown>
-            <ondown condition="Control.HasFocus(300) + Skin.HasSetting(DisableMenuHor)  + [String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)]">9966</ondown>
+            <ondown condition="Control.HasFocus(300) + Skin.HasSetting(SettingsNew) + Skin.HasSetting(DisableMenuHor) + [String.IsEqual(Container(300).ListItem.Property(widget),Settings) | String.IsEqual(Container(300).ListItem.Property(widgetType),Settings Widget)]">9967</ondown>
+            <ondown condition="Control.HasFocus(300) + !Skin.HasSetting(SettingsNew) + Skin.HasSetting(DisableMenuHor) + [String.IsEqual(Container(300).ListItem.Property(widget),Settings) | String.IsEqual(Container(300).ListItem.Property(widgetType),Settings Widget)]">9000</ondown>
+            <ondown condition="Control.HasFocus(300) + Skin.HasSetting(DisableMenuHor) + [String.IsEqual(Container(300).ListItem.Property(widget),Weather) | String.IsEqual(Container(300).ListItem.Property(widgetType),Weather Widget)]">9966</ondown>
             <ondown condition="String.IsEqual(Container(300).ListItem.Property(widgetspotlight),true) + String.IsEqual(Container(300).ListItem.Property(widgetSpotlighttype),LiveTV)">SetFocus(901)</ondown>
             <ondown condition="$EXP[TVSpotlight]">1505</ondown>
             <ondown condition="$EXP[MovieSpotlight]">1506</ondown>

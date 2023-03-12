@@ -2013,7 +2013,7 @@
                     <right>100</right>
                     <width>$PARAM[width]</width>
                     <height>184</height>
-                    <animation effect="slide" end="80,0" time="0" condition="[[String.IsEmpty(ListItem.Studio) + !String.Contains(ListItem.Studio,/)] | Control.IsVisible(1505)  | Control.IsVisible(1506)]">Conditional</animation>
+                    <animation effect="slide" end="80,0" time="0" condition="[[String.IsEmpty(ListItem.Studio) + !String.Contains(ListItem.Studio,/)] | Control.IsVisible(1505) | Control.IsVisible(1506)]">Conditional</animation>
                     <animation effect="slide" end="-450,-20" time="0" condition="Control.IsVisible(1505)">Conditional</animation>
                     <animation effect="slide" end="-450,-20" time="0" condition="Control.IsVisible(1506)">Conditional</animation>
                     <include content="Object_Ratings_Container" condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(Home.xml) | Window.IsVisible(script-globalsearch.xml)">
@@ -9564,14 +9564,18 @@
             </include>
         </control>
 
-        <control type="label" id="991"><include>Defs_Hidden_Button</include></control>
+        <control type="label" id="991">
+            <include>Defs_Hidden_Button</include>
+        </control>
         <control type="button" id="990">
             <onright>9000</onright>
             <onleft>noop</onleft>
             <ondown>50</ondown>
             <include>Defs_Hidden_Button</include>
         </control>
-        <control type="label" id="999"><include>Defs_Hidden_Button</include></control>
+        <control type="label" id="999">
+            <include>Defs_Hidden_Button</include>
+        </control>
    </include>
 
 </includes>
