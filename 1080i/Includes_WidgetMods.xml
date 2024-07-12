@@ -742,11 +742,20 @@
           <height>45</height>
           <width>90</width>
           <texture background="true" colordiffuse="99FF0000" flipy="true">diffuse/halfbox.png</texture>
+          <visible>!Skin.HasSetting(DisableAuraHomeLayout)</visible>
+        </control>
+        <control type="image">
+          <left>0</left>
+          <bottom>10</bottom>
+          <height>45</height>
+          <width>90</width>
+          <texture background="true" colordiffuse="99000000" flipy="true">diffuse/halfbox.png</texture>
+          <visible>Skin.HasSetting(DisableAuraHomeLayout)</visible>
         </control>
         <control type="textbox">
-          <bottom>-10</bottom>
-          <left>4</left>
-          <height>55</height>
+          <bottom>-15</bottom>
+          <left>10</left>
+          <height>60</height>
           <width>90</width>
           <label>[I]$INFO[ListItem.Season, S,: ]$INFO[ListItem.Episode,E, ][/I]</label>
           <textcolor>white</textcolor>
