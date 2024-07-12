@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">3012</defaultcontrol>
+    <onload>Dialog.Close(fullscreeninfo,true)</onload>
+    <onload>Dialog.Close(videoosd,true)</onload>
     <zorder>0</zorder>
     <controls>
         <control type="label" id="3000"><visible>false</visible></control>
@@ -13,7 +15,7 @@
             <include>Animation_FadeIn_Slide</include>
             <include>Animation_FadeOut</include>
             <left>60</left>
-            <bottom>100</bottom>
+            <bottom>220</bottom>
             <width>592</width>
             <height>333</height>
 
@@ -34,6 +36,27 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
                 <include condition="!Skin.HasSetting(DisableShadows)">Defs_Shadow_24</include>
                 <texture>$INFO[Player.Art(fanart)]</texture>
+            </control>
+
+            <control type="image">
+                <top>-18</top>
+                <left>35</left>
+                <width>50</width>
+                <height>50</height>
+                <aspect>keep</aspect>
+                <texture colordiffuse="FFFF4081">special://skin/extras/icons/favourite.png</texture>
+                <animation effect="slide" end="0,8" time="0" condition="true">Conditional</animation>
+                <visible>!String.IsEmpty(Window.Property(rating))</visible>
+            </control>
+            <control type="label">
+                <top>0</top>
+                <width>auto</width>
+                <height>35</height>
+                <label>$INFO[Window.Property(rating), ,]</label>
+                <font>font12</font>
+                <textcolor>eeffffff</textcolor>
+                <shadowcolor>bf000000</shadowcolor>
+                <visible>!String.IsEmpty(Window.Property(rating))</visible>
             </control>
 
             <control type="image" description="blackline">
@@ -63,25 +86,39 @@
                 <label>$INFO[Player.TimeRemaining(ss)]</label>
             </control>
 
+<!-- Label Bar -->
 
             <control type="label" description="text">
-                <left>20</left>
+                <left>15</left>
                 <right>120</right>
                 <height>64</height>
-                <bottom>0</bottom>
+                <bottom>20</bottom>
                 <aligny>center</aligny>
                 <font>font_tiny</font>
-		<label>$INFO[Window.Property(tvshowtitle),, - ]</label>
+		        <label>$INFO[Window.Property(tvshowtitle),, - ]$INFO[Window.Property(season),S,]$INFO[Window.Property(episode),E,]</label>
                 <textcolor>Selected</textcolor>
+                <visible>!String.IsEmpty(Window.Property(title))</visible>
+            </control>
+
+            <control type="label" description="text">
+                <left>15</left>
+                <right>120</right>
+                <height>64</height>
+                <bottom>-10</bottom>
+                <aligny>center</aligny>
+                <font>font_tiny</font>
+                <label>$INFO[Window.Property(title)]</label>
+                <textcolor>Selected</textcolor>
+                <visible>!String.IsEmpty(Window.Property(title))</visible>
             </control>
 
             <control type="button" id="3012">
                 <description>Play</description>
-                <right>64</right>
-                <bottom>8</bottom>
-                <width>48</width>
+                <right>102</right>
+                <bottom>5</bottom>
+                <width>176</width>
                 <height>48</height>
-                <label></label>
+                <label>$ADDON[service.upnext 30006]</label> <!-- Watch Now -->
                 <align>center</align>
                 <aligny>center</aligny>
                 <textoffsetx>0</textoffsetx>
@@ -94,10 +131,10 @@
                 <texturenofocus colordiffuse="00ffffff" border="5">noop</texturenofocus>
             </control>
             <control type="image">
-                <description>Play</description>
-                <right>72</right>
-                <bottom>16</bottom>
-                <width>32</width>
+                <description>Play</description> <!-- Play Button -->
+                <right>98</right>
+                <bottom>12</bottom>
+                <width>35</width>
                 <height>32</height>
                 <texture>common/playwhite.png</texture>
                 <aspectratio>keep</aspectratio>
@@ -105,11 +142,11 @@
             </control>
             <control type="button" id="3013">
                 <description>Cancel</description>
-                <right>8</right>
-                <bottom>8</bottom>
-                <width>48</width>
+                <right>10</right>
+                <bottom>5</bottom>
+                <width>75</width>
                 <height>48</height>
-                <label>X</label>
+                <label>$ADDON[service.upnext 30034]</label> <!-- Close -->
                 <align>center</align>
                 <aligny>center</aligny>
                 <textoffsetx>0</textoffsetx>
@@ -118,9 +155,34 @@
                 <font>font_tiny_bold</font>
                 <textcolor>main_fg_100</textcolor>
                 <focusedcolor>Selected</focusedcolor>
-                <texturefocus colordiffuse="yellow" border="5">common/white.png</texturefocus>
+                <texturefocus colordiffuse="red" border="5">common/white.png</texturefocus>
                 <texturenofocus colordiffuse="00ffffff" border="5">noop</texturenofocus>
             </control>
-        </control>
+            <control type="group">
+                <animation effect="fade" time="150">VisibleChange</animation>
+                <control type="label">
+                    <font>font_clock</font>
+                    <shadowcolor>text_shadow</shadowcolor>
+                    <top>130</top>
+                    <right>15</right>
+                    <height>200</height>
+                    <width>600</width>
+                    <align>right</align>
+                    <label>Current Time: $INFO[System.Time]</label>
+                </control>
+                <control type="label">
+                    <right>15</right>
+                    <top>204</top>
+                    <width>800</width>
+                    <height>100</height>
+                    <align>right</align>
+                    <itemgap>5</itemgap>
+                    <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <label>$ADDON[service.upnext 30009]</label> <!-- Ends at: $INFO[Window.Property(endtime)] -->
+                    <shadowcolor>text_shadow</shadowcolor>
+                </control>
+            </control>
+        </control>        
     </controls>
 </window>
