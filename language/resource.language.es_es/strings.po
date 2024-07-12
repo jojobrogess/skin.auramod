@@ -4500,3 +4500,13 @@ msgstr "Destacados de Películas"
 msgctxt "#31921"
 msgid "Spotlight TV"
 msgstr "Destacados de Series"
+
+#: /shortcuts/searchmenus.DATA.xml
+msgctxt "#31922"
+msgid "Umbrella Movies"
+msgstr "Películas Umbrella"
+
+#: /shortcuts/searchmenus.DATA.xml
+msgctxt "#31923"
+msgid "Umbrella TV Shows"
+msgstr "Series Umbrella"

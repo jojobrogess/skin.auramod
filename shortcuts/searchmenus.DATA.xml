@@ -52,6 +52,18 @@
     <icon>DefaultShortcut.png</icon>
     <action>plugin://plugin.video.venom/?action=tvSearchterm&amp;name=</action>
   </shortcut>
+    <shortcut>
+    <label>$LOCALIZE[31922]</label> <!-- Umbrella Movies -->
+    <label2>Custom item</label2>
+    <icon>DefaultShortcut.png</icon>
+    <action>plugin://plugin.video.umbrella/?action=movieSearchterm&amp;name=</action>
+  </shortcut>
+  <shortcut>
+    <label>$LOCALIZE[31923]</label> <!-- Umbrella TV Shows -->
+    <label2>Custom item</label2>
+    <icon>DefaultShortcut.png</icon>
+    <action>plugin://plugin.video.umbrella/?action=tvSearchterm&amp;name=</action>
+  </shortcut>
   <shortcut>
     <defaultID />
     <label>Kodi On Demand</label>

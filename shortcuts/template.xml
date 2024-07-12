@@ -181,6 +181,8 @@
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBShows">plugin://plugin.video.themoviedb.helper?info=search&amp;history=true&amp;type=tv&amp;query=</property>
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-TMDBPeople">plugin://plugin.video.themoviedb.helper?info=search&amp;type=person&amp;query=</property>
             <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Kaito">plugin://plugin.video.kaito/?action=search_results&amp;action_args=</property>
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Umbrella-Movies">plugin://plugin.video.umbrella/?action=movieSearchterm&amp;name=</property>
+            <property name="path" tag="property" attribute="name|list" value="DefaultSearch-Umbrella-TVShows">plugin://plugin.video.umbrella/?action=tvSearchterm&amp;name=</property>
 
 
             <property name="label" tag="label" />
